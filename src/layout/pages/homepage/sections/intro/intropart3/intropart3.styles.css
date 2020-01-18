@@ -1,0 +1,91 @@
+.intropart3{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intropart3 .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.intropart3 .left h1{
+    font-size: 1rem;
+    color: #fff;
+}
+.intropart3 .left h2{
+    font-size: 3.5rem;
+    color: #fff;
+}
+.intropart3 .left h2 span{
+    font-size: 3.5rem;
+    color: #F39D00;
+}
+.intropart3 .left h3{
+    font-size: 1.2rem;
+    color: #fff;
+}
+.intropart3 .button-group{
+    margin-top: 50px;
+}
+.intropart3 .button-group a{
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+.intropart3 .button-group a i{
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #f0ac0e;
+    background-image: linear-gradient(90deg,#f0ac0e 0%,#f56616 100%);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+}
+.button-group a i:hover{
+    background-image: linear-gradient(90deg,#f0ac0e 0%,#f56616 40%);
+}
+.button-group a:nth-child(1){
+    background-color: transparent;
+    background-image: linear-gradient(270deg,#6254e7 0%,#9289f1 100%);
+    color: #fff;
+}
+.button-group a:nth-child(1):hover{
+    background-image: linear-gradient(270deg,#6254e7 0%,#9289f1 40%);
+}
+.button-group a:nth-child(2)
+{
+    color: #F39D00;
+    font-weight: bold;
+}
+.intropart3 .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intropart3 .right img{
+    width: 90%;
+    height: 100%;
+}
+
+@media only screen and (max-width:1024px){
+    .intropart3{
+        width: 90%;
+    }
+    .intropart3 .left h2{
+        font-size: 2.5rem;
+        color: #fff;
+    }
+    .intropart3 .left h2 span{
+        font-size: 2.5rem;
+        color: #F39D00;
+    }
+}

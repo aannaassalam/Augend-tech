@@ -1,0 +1,66 @@
+.comment-box h1{
+    font-size: 1.5rem;
+    color: red;
+}
+.comment-box .comment{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 1px 4px rgba(0,0,0,.2);
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.comment-box .comment .top{
+    width: 100%;
+    height: 70px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #3330a3;
+    border-radius: 4px;
+}
+.comment-box .comment .top .left{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comment-box .comment .top .left img{
+    width: 80%;
+    height: 100%;
+    padding: 0.3rem;
+    border-radius: 50%;
+    object-fit: fill;
+}
+.comment-box .comment .top .right{
+    width:60%;
+    height: 100%;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.comment-box .comment .top .right h2{
+    font-size: 1.2rem;
+    margin: 0;
+    color: #fff;
+}
+
+.comment-box .comment .top .right h3{
+    font-size: 1rem;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+.comment-box .comment .bottom h4{
+    font-size: 1.2rem;
+}

@@ -1,0 +1,113 @@
+.anbox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anbox .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.anbox .left h2{
+    color: #f78acb;
+}
+.anbox .left h3{
+    font-size: 1rem;
+}
+.anbox .left .checkbox{
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anbox .left .checkbox .left{
+    width: 50%;
+    height: 180px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.anbox .left .checkbox .right{
+    width: 50%;
+    height: 180px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.anbox .left .checkbox .check{
+    width: 220px;
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+.anbox .left .checkbox .check i{
+    color: #fff;
+    padding: 8px;
+    background-color: #0000ff;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 0.8rem;
+}
+.anbox .left .checkbox .check h4{
+    font-size: 1.2rem;
+}
+
+.anbox .left .checkbox .check:before{
+    content: "";
+    width: 0px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    z-index: -1;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.anbox .left .checkbox .check:hover:before{
+    width: 220px;
+    transform-origin: left;
+    transition: width .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
+}
+.anbox .left .checkbox .check:hover i{
+    color: #f78acb;
+    background-color: #fff;
+    transition: all 0.35s ease-in;
+}
+.anbox .left .checkbox .check:hover h4{
+    color: #fff;
+    transition: color 0.35s ease-in;
+}
+.anbox .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anbox .right img{
+    width: 70%;
+    height: 80%;
+}
+
+@media only screen and (max-width:1024px){
+    .anbox{
+        flex-direction: column;
+    }
+    .anbox .left{
+        width: 100%;
+    }
+    .anbox .right{
+        width: 100%;
+    }
+}
