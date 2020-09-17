@@ -83,5 +83,77 @@
 @media only screen and (max-width:1024px){
     .workprocess .part{
         width: 90%;
+        height: 35vh;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .workprocess .part{
+        height: 40vh;
+    }
+}
+
+@media(max-width: 468px){
+    .workprocess .part{
+        height: 52vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-around;
+    }
+    .workprocess .part .left{
+        width: auto;
+        height: 50%;
+        margin-bottom: 2rem;
+    }
+    .workprocess .part .right{
+        width: 100%;
+        height: 30%;
+        margin-bottom: 1rem;
+    }
+    .workprocess .part .right h2{
+        margin: 0 1rem;
+        font-size: 1.2rem;
+    }
+    .workprocess .part .right .content h3{
+        font-size: 1.2rem;
+    }
+    .workprocess .part .right .content h4{
+        font-size: 0.8rem;
+    }
+    .arrow1 img,.arrow2 img,.arrow3 img,.arrow4 img{
+        width: 90%;
+    }
+    .arrow1{
+        bottom: -5rem;
+        left: 12rem;
+    }
+    .arrow2{
+        bottom: -7rem;
+        left: 8rem;
+    }
+    .arrow3{
+        bottom: -5.5rem;
+        left: 8rem;
+    }
+    .arrow4{
+        bottom: -6rem;
+        left: 7rem;
+    }
+}
+
+@media (max-width: 368px){
+    .workprocess .part{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-around;
+    }
+    .arrow2{
+        bottom: -5rem;
+        left: 8rem;
+    }
+    .arrow4{
+        bottom: -3.5rem;
+        left: 7rem;
     }
 }

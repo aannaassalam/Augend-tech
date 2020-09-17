@@ -51,7 +51,7 @@ class App extends React.Component {
     <div className="App">
           <BrowserRouter>
           <SmoothScroll>
-            <NavBar />
+            {/* <NavBar /> */}
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/services/web-development" component={Build} />

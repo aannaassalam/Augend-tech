@@ -1,113 +1,142 @@
-.uebox{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.uebox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.uebox .left{
-    width: 50%;
-    height: 100%;
-    display: flex;
+.uebox .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.uebox .left h2 {
+  color: #fa7070;
+  margin: 15px 0;
+}
+.uebox .left h3 {
+  font-size: 1rem;
+}
+.uebox .left .checkbox {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uebox .left .checkbox .left {
+  width: 50%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.uebox .left .checkbox .right {
+  width: 50%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.uebox .left .checkbox .check {
+  width: 220px;
+  height: 45px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+.uebox .left .checkbox .check i {
+  color: #fff;
+  padding: 8px;
+  background-color: #0000ff;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+.uebox .left .checkbox .check h4 {
+  font-size: 1.2rem;
+}
+
+.uebox .left .checkbox .check:before {
+  content: "";
+  width: 0px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  z-index: -1;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.uebox .left .checkbox .check:hover:before {
+  width: 220px;
+  transform-origin: left;
+  transition: width 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+.uebox .left .checkbox .check:hover i {
+  color: #fa7070;
+  background-color: #fff;
+  transition: all 0.35s ease-in;
+}
+.uebox .left .checkbox .check:hover h4 {
+  color: #fff;
+  transition: color 0.35s ease-in;
+}
+.uebox .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uebox .right img {
+  width: 70%;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .uebox {
     flex-direction: column;
+  }
+  .uebox .left {
+    width: 100%;
+  }
+  .uebox .right {
+    width: 100%;
+  }
+}
+@media (max-width: 680px) {
+  .uebox .left .checkbox {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .uebox .left .checkbox .left {
+    width: 100%;
+    margin-bottom: 23px;
+  }
+  .uebox .left .checkbox .right {
+    width: 100%;
     align-items: flex-start;
-    justify-content: center;
-}
-.uebox .left h2{
-    color: #fa7070;
-}
-.uebox .left h3{
-    font-size: 1rem;
-}
-.uebox .left .checkbox{
+  }
+  .uebox .right {
     width: 100%;
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
 }
-.uebox .left .checkbox .left{
-    width: 50%;
-    height: 180px;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.uebox .left .checkbox .right{
-    width: 50%;
-    height: 180px;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.uebox .left .checkbox .check{
-    width: 220px;
-    height: 45px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-}
-.uebox .left .checkbox .check i{
-    color: #fff;
-    padding: 8px;
-    background-color: #0000ff;
-    border-radius: 4px;
-    margin: 0 10px;
-    font-size: 0.8rem;
-}
-.uebox .left .checkbox .check h4{
-    font-size: 1.2rem;
-}
-
-.uebox .left .checkbox .check:before{
-    content: "";
-    width: 0px;
-    height: 50px;
-    background-color: blue;
-    position: absolute;
-    z-index: -1;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.uebox .left .checkbox .check:hover:before{
-    width: 220px;
-    transform-origin: left;
-    transition: width .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
-}
-.uebox .left .checkbox .check:hover i{
-    color: #fa7070;
-    background-color: #fff;
-    transition: all 0.35s ease-in;
-}
-.uebox .left .checkbox .check:hover h4{
-    color: #fff;
-    transition: color 0.35s ease-in;
-}
-.uebox .right{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.uebox .right img{
-    width: 70%;
-    object-fit: contain;
-}
-
-@media only screen and (max-width:1024px){
-    .uebox{
-        flex-direction: column;
-    }
-    .uebox .left{
-        width: 100%;
-    }
-    .uebox .right{
-        width: 100%;
-    }
+@media (max-width: 380px) {
+  .uebox .left {
+    width: 100%;
+    height: 70%;
+  }
+  .uebox .right {
+    margin: 1rem 0;
+  }
 }

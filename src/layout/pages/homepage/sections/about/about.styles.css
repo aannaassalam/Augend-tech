@@ -1,121 +1,183 @@
-.about{
-    margin-top: 5rem;
+.about {
+  margin-top: 5rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.about .pattern {
+  transform: translateX(30%) scaleX(-1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 40vw;
+  height: 70vh;
+}
+.about .pattern img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about .content {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding: 0 5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(159, 162, 177, 0.6);
+}
+.about .content .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .content .left img {
+  width: 80%;
+}
+.about .content .right {
+  padding-left: 5vw;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.about .content .right h1 {
+  color: #3b3465;
+  font-size: 1rem;
+}
+.about .content .right h2 {
+  color: #5847bb;
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+.about .content .right h3 {
+  color: #5e5e5e;
+  font-size: 1rem;
+}
+
+.about .content .right a div {
+  width: 160px;
+  height: 45px;
+  border-radius: 4px;
+  background-image: linear-gradient(96deg, #6254e7 0%, #9289f1 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.about .content .right a div h6 {
+  font-size: 1rem;
+  color: #fff;
+  transform: translateX(-0px);
+  transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+.about .content .right a div i {
+  color: #fff;
+  margin: 0 0.8rem;
+  position: absolute;
+  right: -50px;
+  transition: position 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+.about .content .right a:hover div h6 {
+  transform: translateX(-15px);
+  font-size: 0.9rem;
+  transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+.about .content .right a:hover div i {
+  transform: translateX(-55px);
+  transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+@media (max-width: 1024px) {
+  .about .content {
+    width: 90%;
+  }
+
+  .about .content .right h2 {
+    font-size: 2rem;
+  }
+
+  .about .content .right h3 {
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about {
     width: 100%;
+    height: 60vh;
+    margin: 0;
+  }
+  .about .content {
+    width: 90%;
+    height: 90%;
+  }
+  .about .content .right h2 {
+    font-size: 1.5rem;
+  }
+  .about .content .right h3 {
+    font-size: 0.7rem;
+  }
+  .about .content .left img {
+    width: 90%;
+  }
+  .about .content .right a div {
+    height: 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .about {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-.about .pattern{
-    transform: translateX(30%) scaleX(-1);
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    width: 40vw;
-    height: 70vh;
-}
-.about .pattern img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.about .content{
-    width: 80%;
-    height: 80%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    padding:0 5rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(159,162,177,.6);
-}
-.about .content .left{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.about .content .left img{
-    width: 80%;
-}
-.about .content .right{
-    padding-left:5vw ;
-    width: 50%;
-    display: flex;
+  }
+
+  .about .content {
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-.about .content .right h1{
-    color: #3B3465;
-    font-size: 1rem;
-}
-.about .content .right h2{
-    color: #5847BB;
-    font-size: 3rem;
-}
-.about .content .right h3{
-    color: #5E5E5E;
-    font-size: 1rem;
+    padding: 0;
+  }
+
+  .about .content .left {
+    width: 70%;
+    height: 55%;
+  }
+
+  .about .content .right {
+    height: 35%;
+    width: 100%;
+  }
 }
 
-.about .content .right a div{
-    width: 160px;
-    height: 50px;
-    border-radius: 4px;
-    background-image: linear-gradient(96deg,#6254e7 0%,#9289f1 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    margin-top: 0.5rem;
-}
-.about .content .right a div h6{
-    font-size: 1rem;
-    color: #fff;
-    transform: translateX(-0px);
-    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
+@media (max-width: 480px) {
+  .about {
+    height: 83vh;
+  }
+  .about .content .left {
+    width: 85%;
+    height: 35%;
+  }
 }
 
-.about .content .right a div i{
-    color: #fff;
-    margin: 0 0.8rem;
-    position: absolute;
-    right: -50px;
-    transition: position .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
-}
-
-.about .content .right a:hover div h6{
-    transform: translateX(-15px);
-    font-size: 0.9rem;
-    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
-}
-
-.about .content .right a:hover div i{
-    transform: translateX(-55px);
-    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
-}
-
-@media only screen and (max-width:1024px){
-    .about{
-        margin-top: 0;
-        width: 100%;
-        height: 47vh;
-    }
-    .about .content{
-        width: 90%;
-        height: 90%;
-    }
-    .about .content .right h2{
-        font-size: 1.5rem;
-    }
-    .about .content .right h3{
-        font-size: 0.7rem;
-    }
+@media (max-width: 368px){
+  .about{
+    height: 100vh;
+  }
 }

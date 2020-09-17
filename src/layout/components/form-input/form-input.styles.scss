@@ -2,7 +2,7 @@ $sub-color: grey;
 $main-color: darkgrey;
 
 @mixin shrinkLabel {
-  top:-15px;
+  top: -15px;
   font-size: 12px;
   color: $main-color;
 }
@@ -17,7 +17,7 @@ $main-color: darkgrey;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
-    width: 100%;
+    width: 90%;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid $sub-color;
@@ -33,7 +33,7 @@ $main-color: darkgrey;
     }
   }
 
-  input[type='password'] {
+  input[type="password"] {
     letter-spacing: 0.3em;
   }
 
@@ -50,5 +50,21 @@ $main-color: darkgrey;
     &.shrink {
       @include shrinkLabel();
     }
+  }
+}
+
+@media (max-width: 680px) {
+  .group {
+    margin: 10px 0;
+    width: 100%;
+  }
+  .group .form-input{
+    height: 50px;
+    margin: 0;
+    padding: 15px 10px 5px 5px;
+    width: 100%;
+  }
+  .group .form-input-label{
+    top: 0px;
   }
 }

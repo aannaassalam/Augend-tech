@@ -31,6 +31,10 @@
 }
 .intropart2 .button-group{
     margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .intropart2 .button-group a{
     padding: 15px 25px;
@@ -66,7 +70,7 @@
 }
 .intropart2 .right{
     width: 50%;
-    height: 80%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,5 +92,58 @@
     .intropart2 .left h2 span{
         font-size: 2.5rem;
         color: #F39D00;
+    }
+    .intropart2 .left h3{
+        font-size: 1rem;
+    }
+    .intropart2 .button-group{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width : 768px){
+    .intropart2 .left h2 {
+        font-size: 2rem;
+      }
+      .intropart2 .left h2 span {
+        font-size: 2rem;
+      }
+      .intropart2 .left h3 {
+        font-size: .7rem;
+      }
+      .intropart2 .button-group {
+        margin-top: 30px;
+      }
+      .intropart2 .button-group a {
+        padding: 10px 15px;
+        font-size: .8rem;
+      }
+}
+
+@media (max-width: 680px){
+    .intropart2{
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .intropart2 .left{
+        width: 90%;
+        height: 50%;
+        margin-top: 35px;
+    }
+    .intropart2 .right{
+        width: 90%;
+    }
+    .intropart2 .button-group{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .button-group a:nth-child(2){
+        padding: 15px 0;
+    }
+    .button-group a:nth-child(2) i{
+        margin-left: 0;
     }
 }

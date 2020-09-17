@@ -1,16 +1,15 @@
-
-.intro{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(./bg2.png);
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
+.intro {
+  width: 100%;
+  height: 105vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./bg2.png);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.slider{
+.slider {
   width: 100%;
   height: 85vh;
   display: flex;
@@ -18,11 +17,24 @@
   align-items: center;
 }
 
-@media only screen and (max-width:1024px){
-  .intro{
+@media only screen and (max-width: 768px) {
+  .intro {
+    height: 75vh;
+  }
+  .slider {
     height: 50vh;
   }
-  .slider{
-    height: 42vh;
+}
+
+@media (max-width: 680px) {
+  .intro {
+    height: 100vh;
+  }
+  .slider {
+    height: 95vh;
+  }
+}
+@media (max-width: 380px) {
+  .intro {
   }
 }

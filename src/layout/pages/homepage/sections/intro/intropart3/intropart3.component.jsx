@@ -8,13 +8,12 @@ const Intropart3=()=>{
     return(
         <div className="intropart1">
             <div className="left">
-                <h1 className="togglecolortext">WELCOME</h1>
                 <h2 className="togglecolortext">Maximize<br/>
-                    Your <span>Visibility</span>
+                    Your <span>Returns</span>
                 </h2>
                 <h3 className="togglecolortext">
                     Ensuring the best return on investment<br/>
-                    for your bespoke SEO campaign requirement.
+                    through your bespoke apps and websites.
                 </h3>
                 <div className="button-group">
                     <a href="#contact-form">CONTACT US</a>

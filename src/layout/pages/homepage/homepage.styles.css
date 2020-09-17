@@ -1,10 +1,134 @@
-.homepage{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
+.homepage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
 }
 
+.homepage .make-payment-container {
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(to right, #2c4697, #3b89e0);
+  margin: 2rem 0;
+}
+
+.homepage .make-payment-container .make-payment {
+  width: 85%;
+  height: 100%;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homepage .make-payment-container .make-payment p {
+  width: 50%;
+  font-size: 2rem;
+}
+
+.homepage .make-payment-container .make-payment button {
+  background-color: #f0ac0e;
+  background-image: linear-gradient(90deg, #f0ac0e 0%, #f56616 100%);
+  outline: none;
+  padding: 17px 25px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.homepage .make-payment-container .make-payment button p{
+    width: 80%;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    transform: translateX(0px);
+    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
+}
+
+.homepage .make-payment-container .make-payment button i{
+    color: #fff;
+    font-size: 1rem;
+    transform: translateX(80px);
+    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
+}
+
+.homepage .make-payment-container .make-payment button:hover p{
+    transform: translateX(-20px);
+    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
+}
+
+.homepage .make-payment-container .make-payment button:hover i{
+    transform: translateX(15px);
+    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
+}
+
+@media(max-width: 1024px){
+    .homepage .make-payment-container .make-payment button{
+        padding: 15px 25px
+    }
+}
+
+@media(max-width: 768px){
+    .homepage .make-payment-container .make-payment{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .homepage .make-payment-container .make-payment p{
+        width: 100%;
+        font-size: 1.7rem;
+    }
+}
+
+@media(max-width: 680px){
+    .homepage .make-payment-container{
+        height: 250px;
+    }
+
+    .homepage .make-payment-container .make-payment p{
+        font-size: 1.3rem;
+    }
+
+    .homepage .make-payment-container .make-payment button{
+        padding: 10px 20px;
+    }
+
+    .homepage .make-payment-container .make-payment button  p{
+        font-size: 1rem;
+    }
+
+    .homepage .make-payment-container .make-payment button  i{
+        font-size: 0.9rem;
+    }
+
+    .homepage .make-payment-container .make-payment button:hover p{
+        transform: translateX(-15px);
+    }
+    
+    .homepage .make-payment-container .make-payment button:hover i{
+        transform: translateX(10px);
+    }
+}
+
+@media(max-width: 680px){
+
+    .homepage .make-payment-container .make-payment p{
+        font-size: 1.5rem;
+    }
+
+    .homepage .make-payment-container .make-payment button{
+        padding: 15px 25px;
+    }
+}

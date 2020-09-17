@@ -16,16 +16,16 @@ class Footer extends React.Component{
     {
         return(
             <div className="footer">
-                <div className="top">
+                <div className="top-one">
                     <div className="part part1">
                         <div className="brand">
                             <img src={logo} alt="logo"/>
-                            <h1>FLAPPIFY</h1>
+                            <h1>AUGEND TECH</h1>
                         </div>
                         <div className="desc">
                             <h2>
-                                We focus on the needs of small<br/>
-                                to middle market businesses to<br/>
+                                We focus on the needs of small
+                                to middle market businesses to
                                 improve and grow their return.
                             </h2>
                         </div>
@@ -79,7 +79,7 @@ class Footer extends React.Component{
                     </div>
                 </div>
                 <div className="bottom">
-                    <h4>&copy; {this.state.currentyear} - <span>FLAPPIFY</span>. All Rights Reserved.</h4>
+                    <h4>&copy; {this.state.currentyear} - AUGEND TECH. All Rights Reserved.</h4>
                 </div>
             </div>
         )

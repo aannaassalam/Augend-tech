@@ -21,7 +21,7 @@ class NavBar extends React.Component{
                     <img src={logo} alt="brand-logo"/>
                   </div>
                   <div className="og-name">
-                    <h1 className="togglecolortext">FLAPPIFY</h1>
+                    <h1 className="togglecolortext">AUGEND TECH</h1>
                   </div>
               </div>
               <div className="hamburger" onClick={this.handleHamburger}>
@@ -58,7 +58,7 @@ class NavBar extends React.Component{
                   <div className="menu-list">
                     <ul>
                       <li className="primary-menu"><a href="/" className="togglecolortext">Home</a></li>
-                      <li className="primary-menu drop-menu">
+                      {/* <li className="primary-menu drop-menu">
                         <div className="togglecolortext drop-button">Services<i className="fas fa-angle-down"></i></div>
                         <div className="drop-down-box">
                           <ul className="sub-menu-list">
@@ -67,12 +67,12 @@ class NavBar extends React.Component{
                             <li className="sub-menu"><a href="/services/digital-marketing">Digital Marketing</a></li>
                           </ul>
                         </div>
-                      </li>
+                      </li> */}
                       <li className="primary-menu"><a className="togglecolortext" href="/blog" >Blog</a></li>
                       <li className="primary-menu"><a className="togglecolortext" href="/works" >Our Works</a></li>
-                      <li className="primary-menu"><a href="/contact" className="create">Get a Quote</a></li>
+                      {/* <li className="primary-menu"><a href="/contact" className="create">Get a Quote</a></li> */}
                     </ul>
-                    {(!auth.uid)? null:<SignOut/> }
+                    {/* {(!auth.uid)? null:<SignOut/> } */}
                   </div>
               </div>
             </div>

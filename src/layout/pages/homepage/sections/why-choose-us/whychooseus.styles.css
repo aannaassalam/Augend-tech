@@ -1,153 +1,228 @@
-.whychooseus{
-    margin-top: 5rem;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+.whychooseus {
+  margin-top: 5rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
-.whychooseus .pattern{
-    transform: translateX(-30%);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    width: 40vw;
-    height: 70vh;
+.whychooseus .pattern {
+  transform: translateX(-30%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 40vw;
+  height: 70vh;
 }
-.whychooseus .pattern img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.whychooseus .pattern img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.whychooseus .content{
-    width: 80%;
-    height: 80%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding:0 5rem;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 10px 20px rgba(159,162,177,.4);
+.whychooseus .content {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 5rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(159, 162, 177, 0.4);
 }
-.whychooseus .content .left{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.whychooseus .content .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.whychooseus .content .left img{
-    width: 100%;
+.whychooseus .content .left img {
+  width: 100%;
 }
-.whychooseus .content .right{
-    padding-left:5vw 0;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+.whychooseus .content .right {
+  padding-right: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 }
-.whychooseus .content .right h1{
-    color: #3B3465;
+.whychooseus .content .right h1 {
+  color: #3b3465;
+  font-size: 1rem;
+}
+.whychooseus .content .right h2 {
+  color: #5847bb;
+  font-size: 3rem;
+}
+.whychooseus .content .right h3 {
+  color: #5e5e5e;
+  font-size: 1rem;
+}
+.whychooseus .content .right .checklist {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.whychooseus .content .right .checklist i {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.whychooseus .content .right .checklist .cl1 {
+  background: linear-gradient(to right, rgb(175, 144, 247), #6b58ed);
+}
+.whychooseus .content .right .checklist .cl2 {
+  background: linear-gradient(to right, rgb(255, 191, 117), #f67400);
+}
+.whychooseus .content .right .checklist .cl3 {
+  background: linear-gradient(to right, rgb(155, 255, 171), #34cc7d);
+}
+
+.whychooseus .content .right .checklist h4 {
+  color: #000;
+}
+
+.whychooseus .content .right a div {
+  width: 180px;
+  height: 50px;
+  border-radius: 4px;
+  background-image: linear-gradient(96deg, #6254e7 0%, #9289f1 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.whychooseus .content .right a div h6 {
+  font-size: 1rem;
+  color: #fff;
+  transform: translateX(-0px);
+  transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+.whychooseus .content .right a div i {
+  color: #fff;
+  margin: 0 0.8rem;
+  position: absolute;
+  right: -60px;
+  transition: position 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+.whychooseus .content .right a:hover div h6 {
+  transform: translateX(-20px);
+  font-size: 0.9rem;
+  transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+.whychooseus .content .right a:hover div i {
+  transform: translateX(-60px);
+  transition: transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
+    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+
+@media (max-width: 1024px) {
+  .whychooseus .content {
+    width: 90%;
+  }
+  .whychooseus .content .right h1 {
     font-size: 1rem;
-}
-.whychooseus .content .right h2{
-    color: #5847BB;
-    font-size: 3rem;
-}
-.whychooseus .content .right h3{
-    color: #5E5E5E;
+  }
+  .whychooseus .content .right h2 {
+    font-size: 2rem;
+  }
+  .whychooseus .content .right h3 {
+    font-size: 0.7rem;
+  }
+  .whychooseus .content .right .checklist i {
+    padding: 7px;
     font-size: 1rem;
-}
-.whychooseus .content .right .checklist{
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.whychooseus .content .right .checklist i{
-    padding: 10px;
-    margin-right: 10px;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 1.2rem;
-}
-.whychooseus .content .right .checklist .cl1{
-    background: linear-gradient(to right,rgb(175, 144, 247),#6B58ED);
-}
-.whychooseus .content .right .checklist .cl2{
-    background: linear-gradient(to right,rgb(255, 191, 117),#F67400);
-}
-.whychooseus .content .right .checklist .cl3{
-    background: linear-gradient(to right,rgb(155, 255, 171),#34CC7D);
-}
-
-.whychooseus .content .right .checklist h4{
-    color: #000;
-}
-
-.whychooseus .content .right a div{
-    width: 180px;
-    height: 50px;
-    border-radius: 4px;
-    background-image: linear-gradient(96deg,#6254e7 0%,#9289f1 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    margin-top: 0.5rem;
-}
-
-.whychooseus .content .right a div h6{
-    font-size: 1rem;
-    color: #fff;
-    transform: translateX(-0px);
-    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
-}
-
-.whychooseus .content .right a div i{
-    color: #fff;
-    margin: 0 0.8rem;
-    position: absolute;
-    right: -60px;
-    transition: position .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
-}
-
-.whychooseus .content .right a:hover div h6{
-    transform: translateX(-20px);
+  }
+  .whychooseus .content .right .checklist h4 {
+    font-size: 0.8rem;
+  }
+  .whychooseus .content .right a div {
+    height: 40px;
+  }
+  .whychooseus .content .right a div h6 {
     font-size: 0.9rem;
-    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
+  }
 }
 
-.whychooseus .content .right a:hover div i{
-    transform: translateX(-60px);
-    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
+@media (max-width: 878px) {
+  .whychooseus .content .right h1 {
+    font-size: 0.9rem;
+  }
+  .whychooseus .content .right h2 {
+    font-size: 1.8rem;
+  }
+  .whychooseus .content .right h3 {
+    font-size: 0.6rem;
+  }
+  .whychooseus .content .right .checklist h4 {
+    font-size: 0.7rem;
+  }
 }
 
-@media only screen and (max-width:1024px){
-    .whychooseus .content{
-        width: 90%;
-        height: 90%;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        flex-direction: column-reverse;
-    }
-    .whychooseus .content .left{
-        width: 100%;
-        height: 50%;
-    }
-    .whychooseus .content .right{
-        width: 100%;
-        height: 50%;
-    }
-    .whychooseus .content .right h2{
-        color: #5847BB;
-        font-size: 2rem;
-    }
+@media only screen and (max-width: 768px) {
+  .whychooseus {
+    height: 100vh;
+    margin-top: 3rem;
+  }
+
+  .whychooseus .pattern{
+    width: 100%;
+    height: 100%;
+  }
+
+  .whychooseus .content {
+    width: 90%;
+    height: 95%;
+    padding: 0rem 2rem 1rem;
+    flex-direction: column-reverse;
+  }
+  .whychooseus .content .left {
+    width: 80%;
+    height: 40%;
+  }
+  .whychooseus .content .right {
+    width: 100%;
+    height: 50%;
+    padding: 0;
+  }
+  .whychooseus .content .right h2 {
+    color: #5847bb;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 468px){
+  .whychooseus{
+    height: 100vh;
+    margin-top: 6rem;
+  }
+  .whychooseus .content .left {
+    width: 80%;
+    height: 30%;
+  }
+}
+
+@media (max-width: 360px){
+  .whychooseus{
+    height: 120vh;
+    margin-top: 6rem;
+  }
 }

@@ -16,6 +16,7 @@
 }
 .debox .left h2{
     color: #0000ff;
+    margin: 15px 0;
 }
 .debox .left h3{
     font-size: 1rem;
@@ -110,5 +111,33 @@
     }
     .debox .right{
         width: 100%;
+    }
+}
+@media (max-width: 680px){
+    .debox .left .checkbox{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .debox .left .checkbox .left{
+        width: 100%;
+        margin-bottom: 23px;
+    }
+    .debox .left .checkbox .right{
+        width: 100%;
+        align-items: flex-start;
+    }
+    .debox .right{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 380px){
+    .debox .left{
+        width: 100%;
+        height: 70%;
+    }
+    .debox .right{
+        margin: 1rem 0;
     }
 }

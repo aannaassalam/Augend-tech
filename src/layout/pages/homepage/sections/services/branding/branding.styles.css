@@ -16,6 +16,7 @@
 }
 .brbox .left h2{
     color: #eb6b3d;
+    margin: 15px 0;
 }
 .brbox .left h3{
     font-size: 1rem;
@@ -109,5 +110,33 @@
     }
     .brbox .right{
         width: 100%;
+    }
+}
+@media (max-width: 680px){
+    .brbox .left .checkbox{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .brbox .left .checkbox .left{
+        width: 100%;
+        margin-bottom: 23px;
+    }
+    .brbox .left .checkbox .right{
+        width: 100%;
+        align-items: flex-start;
+    }
+    .brbox .right{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 380px){
+    .brbox .left{
+        width: 100%;
+        height: 70%;
+    }
+    .brbox .right{
+        margin: 1rem 0;
     }
 }
