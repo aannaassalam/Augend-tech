@@ -13,6 +13,7 @@
   height: 250px;
   background-image: linear-gradient(to right, #2c4697, #3b89e0);
   margin: 2rem 0;
+  position: relative;
 }
 
 .homepage .make-payment-container .make-payment {
