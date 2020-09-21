@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import NavBar from './navbar/navbar.component';
-import Intro from './sections/intro/intro.component';
-import About from './sections/about/about.component';
-import Services from './sections/services/services.component';
-import WhyChooseUS from './sections/why-choose-us/whychooseus.component';
-import WorkProcess from './sections/workprocess/workprocess.component';
-import Technologies from './sections/technologies/technologies.component';
-import ProjectPreview from './sections/project-gallery/projectpreview.component';
-import BlogPreview from './sections/blog-preview/blogpreview.component';
-import ContactForm from './sections/contact-form/contactform.component';
-import Razorpay from 'razorpay';
+import NavBar from "./navbar/navbar.component";
+import Intro from "./sections/intro/intro.component";
+import About from "./sections/about/about.component";
+import Services from "./sections/services/services.component";
+import WhyChooseUS from "./sections/why-choose-us/whychooseus.component";
+import WorkProcess from "./sections/workprocess/workprocess.component";
+import Technologies from "./sections/technologies/technologies.component";
+import ProjectPreview from "./sections/project-gallery/projectpreview.component";
+import BlogPreview from "./sections/blog-preview/blogpreview.component";
+import ContactForm from "./sections/contact-form/contactform.component";
+import Modal from "../../components/modal/modal";
 
 import "./homepage.styles.css";
 
@@ -18,8 +18,9 @@ class HomePage extends React.Component {
   constructor() {
     super();
     this.state = {
-      loading: false
-    }
+      loading: false,
+      modal: false,
+    };
   }
   componentDidMount() {
     // document.querySelector('.navbar').style.display='none';
@@ -28,38 +29,13 @@ class HomePage extends React.Component {
     // document.querySelector('.navbar').style.display='flex';
   }
 
-  handlePayment() {
-    // var instance = new Razorpay({
-    //   key_id: 'rzp_test_dxlgLQGi0JrIZp',
-    //   key_secret: 'qdoDZyrvsV7WMO2wi0iVTALJ',
-    // });
-    // instance.payments.capture( "zkbsadfih99089", 5000 );
-    // alert("hola");
-    const options = {
-      key: 'rzp_live_OPodxnEwG2T1yT',
-      name: "Augend Tech",
-      description: "Make a payment",
-      handler: async (response) => {
-        try {
-          const paymentId = response.razorpay_payment_id;
-        } catch (err) {
-          console.log(err);
-        }
-      },
-      theme: {
-        color: "#2D499B",
-      },
-    };
-    const rzp1 = new window.Razorpay(options);
-    rzp1.open();
-  }
-
   render() {
     return (
       <div>
         <div className='load'>
           {/* <Loader/> */}
         </div>
+        <div className="load">{/* <Loader/> */}</div>
         <div className="homepage">
           <NavBar />
           <Intro />
@@ -71,15 +47,34 @@ class HomePage extends React.Component {
           <ProjectPreview />
           <div className="make-payment-container">
             <div className="make-payment">
-              <p>The harder you work for something, the greater you'll feel when you achieve it.</p>
-              <button type="button" onClick={this.handlePayment}><p>Make a payment</p><i className="fas fa-credit-card"></i> </button>
+              <p>
+                The harder you work for something, the greater you'll feel when you achieve it.
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  console.log("noticed");
+                  this.setState({ modal: true });
+                }}
+              >
+                <p>Make a payment</p>
+                <i className="fas fa-credit-card"></i>
+              </button>
             </div>
+            {this.state.modal ? (
+              <Modal
+                close={() => {
+                  console.log("true");
+                  this.setState({ modal: false });
+                }}
+              />
+            ) : null}
           </div>
-          {/* <BlogPreview/> */}
+          <BlogPreview />
           <ContactForm />
         </div>
       </div>
-    )
+    );
   }
 }
 
