@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import logo from "../../../../assets/logo.png";
 import SignOut from "./signOut";
+import Modal from "../../../components/modal/modal";
 
 import "./navbar.styles.css";
 
@@ -10,6 +11,7 @@ class NavBar extends React.Component {
     super(props);
     this.state = {
       hamburgerActive: false,
+      modal: false
     };
   }
 
@@ -151,8 +153,13 @@ class NavBar extends React.Component {
                 </li>
                 <li className="primary-menu">
                   <a href="#contact-form" class="contact-btn">
-                    CONTACT US
+                    Contact us
                   </a>
+                </li>
+                <li className="primary-menu">
+                  <p onClick={() => this.setState({modal: true})} class="payment-btn">
+                    Make a payment
+                  </p>
                 </li>
                 {/* <li className="primary-menu"><a href="/contact" className="create">Get a Quote</a></li> */}
               </ul>
@@ -160,6 +167,14 @@ class NavBar extends React.Component {
             </div>
           </div>
         </div>
+        {this.state.modal ? (
+              <Modal
+                close={() => {
+                  console.log("true");
+                  this.setState({ modal: false });
+                }}
+              />
+            ) : null}
         {this.state.hamburgerActive
           ? document.getElementsByTagName("body")[0].classList.add("scroll")
           : document.getElementsByTagName("body")[0].classList.remove("scroll")}
