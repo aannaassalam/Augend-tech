@@ -75,11 +75,11 @@ class NavBar extends React.Component {
                       Our Works
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a className="secondary-menu" href="/blog">
                       Blog
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a className="secondary-menu" href="#section-8">
                       Seo-Analysis
@@ -139,13 +139,13 @@ class NavBar extends React.Component {
                           </ul>
                         </div>
                       </li> */}
-                <li className="primary-menu">
+                {/* <li className="primary-menu">
                   <a className="togglecolortext" href="/blog">
                     Blog
                   </a>
-                </li>
+                </li> */}
                 <li className="primary-menu">
-                  <a className="togglecolortext" href="/works">
+                  <a className="togglecolortext" href="#">
                     Portfolio
                   </a>
                 </li>

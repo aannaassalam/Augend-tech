@@ -4,19 +4,16 @@ import analysis from '../../../../../../assets/analysis.png';
 
 import "./analysis.styles.css";
 
-const Analysis = () =>{
-    return(
+const Analysis = () => {
+    return (
         <div className="anbox">
-             <div className="right">
-                <img src={analysis} alt="analysis"/>
+            <div className="right">
+                <img src={analysis} alt="analysis" />
             </div>
             <div className="left">
                 <h1>Always Stay Ahead</h1>
                 <h2>Analysis</h2>
-                <h3>We believe brand interaction is key in communication. Real innovations<br/>
-                    and a positive customer experience are the heart of successful<br/>
-                    communication. No fake products and services. The customer is king,<br/>
-                    their lives and needs are the inspiration.
+                <h3>We offer predictive modeling services that guide you towards the underlying profitable opportunity segments. In addition, they help uncover existing risks well in time and prepare go-to market strategies.
                 </h3>
                 <div className="checkbox">
                     <div className="left">

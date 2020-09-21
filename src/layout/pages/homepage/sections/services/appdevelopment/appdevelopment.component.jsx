@@ -1,19 +1,17 @@
 import React from 'react';
 
-import branding from '../../../../../../assets/branding.png';
+import development from '../../../../../../assets/development.png';
 
-import "./branding.styles.css";
+import "./development.styles.css";
 
-const Branding = () => {
+const AppDevelopment = () => {
     return (
-        <div className="brbox">
-            <div className="right">
-                <img src={branding} alt="branding" />
-            </div>
+        <div className="debox">
             <div className="left">
-                <h1>Your Desire Into A Brand</h1>
-                <h2>Branding</h2>
-                <h3>Crafting a brand identity for your business that will convey your intention, goals and all that you intend to do for your audience - embedded inside a single design - connecting your business with your customers.
+                <h1>Desire And Its Done</h1>
+                <h2>App Development</h2>
+                <h3>
+                    Intuitive designs combined with compelling user experience are what makes our apps stand ahead in the digital age. Seamless experience driven by international standards in collaboration with out-of-the-box ideas is the specialty of Trian helping your business accomplish its goals.
                 </h3>
                 <div className="checkbox">
                     <div className="left">
@@ -46,8 +44,11 @@ const Branding = () => {
                     </div>
                 </div>
             </div>
+            <div className="right">
+                <img src={development} alt="development" />
+            </div>
         </div>
     )
 }
 
-export default Branding;
+export default AppDevelopment;

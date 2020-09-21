@@ -4,19 +4,16 @@ import productdesign from '../../../../../../assets/productdesign.png';
 
 import "./productdesign.styles.css";
 
-const ProductDesign = () =>{
-    return(
+const ProductDesign = () => {
+    return (
         <div className="pdbox">
             <div className="right">
-                <img src={productdesign} alt="product-design"/>
+                <img src={productdesign} alt="product-design" />
             </div>
             <div className="left">
                 <h1>Define Your Desire</h1>
                 <h2>Product Design</h2>
-                <h3>We believe brand interaction is key in communication. Real innovations<br/>
-                    and a positive customer experience are the heart of successful<br/>
-                    communication. No fake products and services. The customer is king,<br/>
-                    their lives and needs are the inspiration.
+                <h3>Enterprise-wide solutions transforming highly complex business requirements into simplified user interfaces bringing about a widespread user engagement is what we promise as part of our UI solutions.
                 </h3>
                 <div className="checkbox">
                     <div className="left">

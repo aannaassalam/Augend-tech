@@ -6,6 +6,7 @@ import ProductDesign from "./product-design/productdesigncomponent";
 import DigitalMarketing from "./digital-marketing/digitalmarketing.component";
 import Branding from "./branding/branding.component";
 import Development from "./development/development.component";
+import AppDevelopment from "./appdevelopment/appdevelopment.component";
 import Analysis from "./analysis/analysis.component";
 
 class Services extends React.Component {
@@ -164,7 +165,7 @@ class Services extends React.Component {
             </div>
             <div className={this.state.tab4} id="ue" onClick={this.handleShow4}>
               <i className="flaticon-ambient"></i>
-              <h3>User Experience</h3>
+              <h3>Branding</h3>
             </div>
             <div className={this.state.tab5} id="dm" onClick={this.handleShow5}>
               <i className="flaticon-content"></i>
@@ -172,13 +173,13 @@ class Services extends React.Component {
             </div>
             <div className={this.state.tab6} id="br" onClick={this.handleShow6}>
               <i className="flaticon-spread"></i>
-              <h3>Branding</h3>
+              <h3>Data Analytics</h3>
             </div>
           </div>
         </div>
         <div className="down">
           <div className={this.state.tab1detail}>
-            <Development />
+            <AppDevelopment />
           </div>
           <div className={this.state.tab2detail}>
             <Development />
@@ -187,13 +188,13 @@ class Services extends React.Component {
             <ProductDesign />
           </div>
           <div className={this.state.tab4detail}>
-            <UserExperience />
+            <Branding />
           </div>
           <div className={this.state.tab5detail}>
             <DigitalMarketing />
           </div>
           <div className={this.state.tab6detail}>
-            <Branding />
+            <Analysis />
           </div>
         </div>
       </div>

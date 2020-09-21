@@ -4,16 +4,13 @@ import development from '../../../../../../assets/development.png';
 
 import "./development.styles.css";
 
-const Development = () =>{
-    return(
+const Development = () => {
+    return (
         <div className="debox">
             <div className="left">
                 <h1>Desire And Its Done</h1>
-                <h2>Development</h2>
-                <h3>We believe brand interaction is key in communication. Real innovations<br/>
-                    and a positive customer experience are the heart of successful<br/>
-                    communication. No fake products and services. The customer is king,<br/>
-                    their lives and needs are the inspiration.
+                <h2>Web Development</h2>
+                <h3>Cross-browser and cross-device compatibility driven by mobile responsiveness all under one roof Starting from basic website designs, including CMS and online store building to highly complex business website apps and design solutions, we will customize the best of web development solutions for you.
                 </h3>
                 <div className="checkbox">
                     <div className="left">
@@ -47,7 +44,7 @@ const Development = () =>{
                 </div>
             </div>
             <div className="right">
-                <img src={development} alt="development"/>
+                <img src={development} alt="development" />
             </div>
         </div>
     )

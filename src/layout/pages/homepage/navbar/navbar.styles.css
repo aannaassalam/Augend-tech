@@ -87,8 +87,7 @@ nav .navbar2 .menu .menu-list .primary-menu .drop-button {
   cursor: pointer;
 }
 nav .navbar2 .menu .menu-list .primary-menu:nth-child(1)::before,
-nav .navbar2 .menu .menu-list .primary-menu:nth-child(2)::before,
-nav .navbar2 .menu .menu-list .primary-menu:nth-child(3)::before {
+nav .navbar2 .menu .menu-list .primary-menu:nth-child(2)::before {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -97,8 +96,7 @@ nav .navbar2 .menu .menu-list .primary-menu:nth-child(3)::before {
   background-color: #f39d00;
 }
 nav .navbar2 .menu .menu-list .primary-menu:nth-child(1):hover::before,
-nav .navbar2 .menu .menu-list .primary-menu:nth-child(2):hover::before,
-nav .navbar2 .menu .menu-list .primary-menu:nth-child(3):hover::before {
+nav .navbar2 .menu .menu-list .primary-menu:nth-child(2):hover::before {
   content: "";
   position: absolute;
   bottom: -5px;

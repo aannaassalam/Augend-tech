@@ -63,6 +63,7 @@
 .about .content .right h3 {
   color: #5e5e5e;
   font-size: 1rem;
+  margin-top: 0.5rem;
 }
 
 .about .content .right a div {
@@ -162,7 +163,8 @@
 
   .about .content .right {
     height: 35%;
-    width: 100%;
+    width: 90%;
+    padding: 0;
   }
 }
 

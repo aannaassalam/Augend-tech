@@ -4,22 +4,21 @@ import logo from '../../../assets/logo.png';
 
 import './footer.styles.css';
 
-class Footer extends React.Component{
-    state={
-        currentyear:''
+class Footer extends React.Component {
+    state = {
+        currentyear: ''
     }
-    componentDidMount(){
-        var year=new Date().getFullYear();
+    componentDidMount() {
+        var year = new Date().getFullYear();
         this.setState({ currentyear: year });
     }
-    render()
-    {
-        return(
+    render() {
+        return (
             <div className="footer">
                 <div className="top-one">
                     <div className="part part1">
                         <div className="brand">
-                            <img src={logo} alt="logo"/>
+                            <img src={logo} alt="logo" />
                             <h1>AUGEND TECH</h1>
                         </div>
                         <div className="desc">
@@ -61,10 +60,10 @@ class Footer extends React.Component{
                             <h3>Services</h3>
                         </div>
                         <div className="bottom">
-                            <a href="/development">Development</a>
-                            <a href="/marketing">Marketing</a>
-                            <a href="/branding">Branding</a>
-                            <a href="/designing">Designing</a>
+                            <a href="#">Development</a>
+                            <a href="#">Marketing</a>
+                            <a href="#">Branding</a>
+                            <a href="#">Designing</a>
                         </div>
                     </div>
                     <div className="part part4">
@@ -72,9 +71,9 @@ class Footer extends React.Component{
                             <h3>Community</h3>
                         </div>
                         <div className="bottom">
-                            <a href="/seo-analysis">Seo Analysis</a>
-                            <a href="/blog">Blog</a>
-                            <a href="/project-gallery">Project Gallery</a>
+                            <a href="#">Seo Analysis</a>
+                            {/* <a href="/blog">Blog</a> */}
+                            <a href="#">Project Gallery</a>
                         </div>
                     </div>
                 </div>
