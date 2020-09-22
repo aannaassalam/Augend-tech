@@ -29,7 +29,18 @@ class Footer extends React.Component {
                                 your business and grows your return.
                             </h2>
                         </div>
-                        <div className="social">
+                    </div>
+                    <div className="part part2">
+                        <div className="top">
+                            <h3>Contact</h3>
+                        </div>
+                        <div className="bottom">
+                            <a href="tel:+1-9167501833"><i className="fas fa-mobile"></i>(US) +91 916 750 1833</a>
+                            <a href="tel:+91-9874174414"><i className="fas fa-mobile"></i>(IND) + 91 987 417 4414</a>
+                            <a href="mailto:contact@augendtech.com?subject=Happy To Assist"><i className="fas fa-envelope-open"></i>contact@augendtech.com</a>
+                        </div>
+                    </div>
+                    <div className="social">
                             <a href="https://www.facebook.com/augendtech" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-facebook-f"></i>
                             </a>
@@ -46,38 +57,6 @@ class Footer extends React.Component {
                                 <i className="fab fa-linkedin-in"></i>
                             </a>
                         </div>
-                    </div>
-                    <div className="part part2">
-                        <div className="top">
-                            <h3>Contact</h3>
-                        </div>
-                        <div className="bottom">
-                            <a href="tel:+1-9167501833"><i className="fas fa-mobile"></i>(US) +91 916 750 1833</a>
-                            <a href="tel:+91-9874174414"><i className="fas fa-mobile"></i>(IND) + 91 987 417 4414</a>
-                            <a href="mailto:contact@augendtech.com?subject=Happy To Assist"><i className="fas fa-envelope-open"></i>contact@augendtech.com</a>
-                        </div>
-                    </div>
-                    <div className="part part3">
-                        <div className="top">
-                            <h3>Services</h3>
-                        </div>
-                        <div className="bottom">
-                            <a href="#">App Development</a>
-                            <a href="#">Website Development</a>
-                            <a href="#">Digital Marketing</a>
-                            <a href="#">Data Analytics</a>
-                        </div>
-                    </div>
-                    <div className="part part4">
-                        <div className="top">
-                            <h3>Community</h3>
-                        </div>
-                        <div className="bottom">
-                            <a href="#">Seo Analysis</a>
-                            {/* <a href="/blog">Blog</a> */}
-                            <a href="#">Project Gallery</a>
-                        </div>
-                    </div>
                 </div>
                 <div className="bottom">
                     <h4>&copy; {this.state.currentyear} - AUGEND TECH. All Rights Reserved.</h4>

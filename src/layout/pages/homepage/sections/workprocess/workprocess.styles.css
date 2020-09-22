@@ -83,7 +83,7 @@
 @media only screen and (max-width:1024px){
     .workprocess .part{
         width: 90%;
-        height: 35vh;
+        /* height: 35vh; */
     }
 }
 

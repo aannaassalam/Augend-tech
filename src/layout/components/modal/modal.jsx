@@ -2,13 +2,12 @@ import React from "react";
 import "./modal.css";
 import firebase from "firebase";
 import razorpay from "./assets/1896px-Razorpay_logo.svg.png";
-import Lottie from 'lottie-react-web';
+import Lottie from "lottie-react-web";
 import tick from "./assets/tick.json";
 import PaypalExpressBtn from "react-paypal-express-checkout";
 import { setTimeout } from "core-js";
 
 export default class Modal extends React.Component {
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +18,7 @@ export default class Modal extends React.Component {
       projectName: "",
       error: " ",
       tab: "info",
-      subTab: "pay"
+      subTab: "pay",
     };
   }
 
@@ -30,15 +29,29 @@ export default class Modal extends React.Component {
     });
   };
 
-  handleDatabase(payment){
-    firebase.firestore().collection("payments").add({
-      name: this.state.name,
-      phone: this.state.phone,
-      email: this.state.email,
-      paymentId: payment.paymentID,
-      amount: this.state.amount,
-      projectName: this.state.projectName,
-    });
+  handleDatabase(payment) {
+    firebase
+      .firestore()
+      .collection("payments")
+      .add({
+        name: this.state.name,
+        phone: this.state.phone,
+        email: this.state.email,
+        paymentId: payment.paymentID,
+        amount: this.state.amount,
+        projectName: this.state.projectName,
+      })
+      .then(() => {
+        this.setState({
+          subTab: "success",
+        });
+        setTimeout(() => {
+          this.props.close();
+          this.setState({
+            subTab: "pay",
+          });
+        }, 3000);
+      });
   }
 
   handleRazorpay() {
@@ -49,15 +62,28 @@ export default class Modal extends React.Component {
       amount: this.state.amount,
       handler: async (response) => {
         try {
-          firebase.firestore().collection("payments").add({
-            name: this.state.name,
-            phone: this.state.phone,
-            email: this.state.email,
-            paymentId: response.razorpay_payment_id,
-            amount: this.state.amount,
-            projectName: this.state.projectName,
-          });
-          this.props.close();
+          firebase
+            .firestore()
+            .collection("payments")
+            .add({
+              name: this.state.name,
+              phone: this.state.phone,
+              email: this.state.email,
+              paymentId: response.razorpay_payment_id,
+              amount: this.state.amount,
+              projectName: this.state.projectName,
+            })
+            .then(() => {
+              this.setState({
+                subTab: "success",
+              });
+              setTimeout(() => {
+                this.props.close();
+                this.setState({
+                  subTab: "pay",
+                });
+              }, 3000);
+            });
         } catch (err) {
           console.log(err);
         }
@@ -100,44 +126,35 @@ export default class Modal extends React.Component {
   }
 
   render() {
-    const amount=parseInt(this.state.amount, 10);
+    const amount = parseInt(this.state.amount, 10);
     const onSuccess = (payment) => {
-        // Congratulation, it came here means everything's fine!
-                console.log("The payment was succeeded!", payment);
-                this.handleDatabase(payment);
-                this.setState({
-                  subTab: "success"
-                })
-                setTimeout(() => {
-                  this.props.close();
-                  this.setState({
-                    subTab: "pay"
-                  })
-                }, 3000);
-                
-            // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
-    }
+      // Congratulation, it came here means everything's fine!
+      console.log("The payment was succeeded!", payment);
+      this.handleDatabase(payment);
+      // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
+    };
     const onCancel = (data) => {
-        // User pressed "cancel" or close Paypal's popup!
-        console.log('The payment was cancelled!', data);
-        // You can bind the "data" object's value to your state or props or whatever here, please see below for sample returned data
-    }
+      // User pressed "cancel" or close Paypal's popup!
+      console.log("The payment was cancelled!", data);
+      // You can bind the "data" object's value to your state or props or whatever here, please see below for sample returned data
+    };
 
     const onError = (err) => {
-        // The main Paypal's script cannot be loaded or somethings block the loading of that script!
-        console.log("Error!", err);
-        // Because the Paypal's main script is loaded asynchronously from "https://www.paypalobjects.com/api/checkout.js"
-        // => sometimes it may take about 0.5 second for everything to get set, or for the button to appear
-    }
-    let env = 'sandbox'; // you can set here to 'production' for production
-    let currency = 'INR'; // or you can set this value from your props or state
+      // The main Paypal's script cannot be loaded or somethings block the loading of that script!
+      console.log("Error!", err);
+      // Because the Paypal's main script is loaded asynchronously from "https://www.paypalobjects.com/api/checkout.js"
+      // => sometimes it may take about 0.5 second for everything to get set, or for the button to appear
+    };
+    let env = "sandbox"; // you can set here to 'production' for production
+    let currency = "INR"; // or you can set this value from your props or state
     let total = amount; // same as above, this is the total amount (based on currency) to be paid by using Paypal express checkout
     // Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
 
     const client = {
-        sandbox:'Ac-IsJnUj4a2f-reCxrYyuZgxxu0RB1IqAgQt-jjYoRzcYMV3SLWC85gf8ekhfJaYmIGD6ghiHRIQogd',
-        // production: 'AaK6PSCmjFHprihIkeblnScs6KHN30mrd56BScD0jRvFHcyZrAfcdaytDDTDMYh7oN2HExaPjmioGCRt',
-    }
+      sandbox:
+        "Ac-IsJnUj4a2f-reCxrYyuZgxxu0RB1IqAgQt-jjYoRzcYMV3SLWC85gf8ekhfJaYmIGD6ghiHRIQogd",
+      // production: 'AaK6PSCmjFHprihIkeblnScs6KHN30mrd56BScD0jRvFHcyZrAfcdaytDDTDMYh7oN2HExaPjmioGCRt',
+    };
 
     return (
       <div className="modal-blank">
@@ -190,14 +207,19 @@ export default class Modal extends React.Component {
                 Pay
               </button>
             </>
-          ) : this.state.subTab === "pay" ? 
-          (
+          ) : this.state.subTab === "pay" ? (
             <div className="payment-container">
               <h3>Choose a method</h3>
-              <div
-                className="paypal"
-              >
-                <PaypalExpressBtn env={env} client={client} currency={currency} total={total} onError={onError} onSuccess={onSuccess} onCancel={onCancel}/>
+              <div className="paypal">
+                <PaypalExpressBtn
+                  env={env}
+                  client={client}
+                  currency={currency}
+                  total={total}
+                  onError={onError}
+                  onSuccess={onSuccess}
+                  onCancel={onCancel}
+                />
               </div>
               <div
                 className="razorpay"
@@ -208,19 +230,16 @@ export default class Modal extends React.Component {
                 <img src={razorpay} alt="Razorpay" />
               </div>
             </div>
-          ): 
-          <div className="success">
-            <div className="animation">
-                <Lottie options={{loop: true,
-                autoplay: true,
-                animationData: tick}}
+          ) : (
+            <div className="success">
+              <div className="animation">
+                <Lottie
+                  options={{ loop: true, autoplay: true, animationData: tick }}
                 />
+              </div>
+              <div className="text">Your transaction was Successful.</div>
             </div>
-            <div className="text">
-                Your transaction was Successful.
-            </div>
-          </div>
-          }
+          )}
         </div>
       </div>
     );

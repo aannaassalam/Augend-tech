@@ -135,6 +135,9 @@
 }
 
 @media (max-width: 1024px) {
+  .whychooseus{
+    height: auto;
+  }
   .whychooseus .content {
     width: 90%;
   }

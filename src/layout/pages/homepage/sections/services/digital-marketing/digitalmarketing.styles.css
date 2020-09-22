@@ -107,9 +107,16 @@
     }
     .dmbox .left{
         width: 100%;
+        margin-bottom: 50px;
     }
     .dmbox .right{
         width: 100%;
+    }
+    .dmbox .left .checkbox{
+        width: 90%;
+    }
+    .debox .left .checkbox .right{
+        margin-bottom: 50px;
     }
 }
 @media (max-width: 680px){

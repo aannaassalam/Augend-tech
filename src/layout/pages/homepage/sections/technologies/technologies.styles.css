@@ -148,6 +148,9 @@
 } */
 
 @media (max-width: 1024px) {
+  .technologies{
+    height: 740px;
+  }
   .technologies .top {
     height: 15vh;
     margin-bottom: 4rem;

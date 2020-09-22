@@ -17,6 +17,12 @@
   align-items: center;
 }
 
+@media(max-width: 1024px){
+  .intro{
+    height: auto;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .intro {
     height: 75vh;

@@ -89,7 +89,8 @@ nav .navbar2 .menu .menu-list .primary-menu .drop-button {
   cursor: pointer;
 }
 nav .navbar2 .menu .menu-list .primary-menu:nth-child(1)::before,
-nav .navbar2 .menu .menu-list .primary-menu:nth-child(2)::before {
+nav .navbar2 .menu .menu-list .primary-menu:nth-child(2)::before,
+nav .navbar2 .menu .menu-list .primary-menu:nth-child(3)::before {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -98,7 +99,8 @@ nav .navbar2 .menu .menu-list .primary-menu:nth-child(2)::before {
   background-color: #f39d00;
 }
 nav .navbar2 .menu .menu-list .primary-menu:nth-child(1):hover::before,
-nav .navbar2 .menu .menu-list .primary-menu:nth-child(2):hover::before {
+nav .navbar2 .menu .menu-list .primary-menu:nth-child(2):hover::before,
+nav .navbar2 .menu .menu-list .primary-menu:nth-child(3):hover::before {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -299,7 +301,7 @@ nav .signout:hover div {
 .scroll{
   overflow-y: hidden;
 }
-@media only screen and (max-width: 868px) {
+@media only screen and (max-width: 1000px) {
   nav .navbar2 {
     justify-content: space-between;
     padding: 0 1rem;
@@ -453,7 +455,7 @@ nav .signout:hover div {
   }
 }
 
-@media only screen and (max-width: 868px) {
+@media only screen and (max-width: 1000px) {
   nav {
     height: 8vh;
   }

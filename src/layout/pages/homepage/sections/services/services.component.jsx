@@ -8,6 +8,8 @@ import Branding from "./branding/branding.component";
 import Development from "./development/development.component";
 import AppDevelopment from "./appdevelopment/appdevelopment.component";
 import Analysis from "./analysis/analysis.component";
+import app from "./assets/app-development.png"
+import appActive from "./assets/app-development-active.png"
 
 class Services extends React.Component {
   constructor(props) {
@@ -146,13 +148,13 @@ class Services extends React.Component {
   };
   render() {
     return (
-      <div className="services">
+      <div className="services" id="ourFeatures">
         <div className="top">
           <h1>OUR FEATURES</h1>
           <h2>We always try to understand our customers expectation</h2>
           <div className="option-list">
-            <div className={this.state.tab1} id="de" onClick={this.handleShow1}>
-              <i className="flaticon-layout"></i>
+            <div className={this.state.tab1} id="ad" onClick={this.handleShow1}>
+              <img src={this.state.tab1 === "active" ? appActive : app} alt="app Icon"/>
               <h3>App Development</h3>
             </div>
             <div className={this.state.tab2} id="de" onClick={this.handleShow2}>
@@ -174,14 +176,6 @@ class Services extends React.Component {
             <div className={this.state.tab6} id="dm" onClick={this.handleShow6}>
               <i className="flaticon-spread"></i>
               <h3>Data Analytics</h3>
-            </div>
-            <div className={this.state.tab3} id="pd" onClick={this.handleShow3}>
-              <i className="flaticon-design"></i>
-              <h3>Product Design</h3>
-            </div>
-            <div className={this.state.tab4} id="ue" onClick={this.handleShow4}>
-              <i className="flaticon-ambient"></i>
-              <h3>Branding</h3>
             </div>
           </div>
         </div>

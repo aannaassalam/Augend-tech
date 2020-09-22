@@ -1,7 +1,7 @@
 .services {
   margin-top: 5rem;
   width: 90%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,6 +28,12 @@
   justify-content: space-between;
   align-items: center;
   white-space: nowrap;
+  scrollbar-width: 0;
+  margin: 25px 0;
+}
+.services .top .option-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .services .top .option-list .option {
   width: 180px;
@@ -48,6 +54,10 @@
   margin: 0;
   font-size: 2.5rem;
 }
+#ad img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
 #ue i::before {
   color: #fa7070;
 }
@@ -66,27 +76,10 @@
 #an i::before {
   color: #f78acb;
 }
-.services .top .option-list .option:hover {
-  background-color: #0000ff;
-  transition: all 0.5s ease-out;
-}
-
-.services .top .option-list .option:hover i::before {
-  margin: 0;
-  font-size: 2.5rem;
-  color: #fff !important;
-}
 
 .services .top .option-list .option h3 {
   margin-top: 1.2rem;
   font-size: 1.1rem;
-}
-
-.services .top .option-list .option:hover h3 {
-  margin-top: 0.2rem;
-  color: #fff;
-  transition: margin 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
-    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
 }
 
 .services .top .option-list .active {
@@ -104,7 +97,7 @@
   margin-bottom: 1rem;
   margin-right: 25px;
   transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
-  -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+    -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
 }
 
 .services .top .option-list .active i::before {
@@ -138,82 +131,74 @@
 
 @media only screen and (max-width: 1024px) {
   .services {
-    height: 200vh;
+    height: 100%;
     margin-top: 1rem;
+  }
+  .services .top .option-list{
+    overflow-x: scroll;
+    scrollbar-width: 5px;
+  }
+  .services .top .option-list::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
   }
   .services .down {
     height: 65%;
+  }
+  .services .top .option-list .option#br {
+    padding: 0 3rem;
+  }
+  .services .top .option-list .option#ad {
+    padding: 0 1.8rem;
+  }
+  .services .top .option-list .option#pd {
+    padding: 0 1.8rem;
+  }
+  .services .top .option-list .option#dm {
+    padding: 0 1.5rem;
+  }
+  .services .top .option-list .option#de {
+    padding: 0 1.5rem;
+  }
+  .services .top .option-list .option#ue {
+    padding: 0 1.5rem;
+  }
+
+  .services .top .option-list .active#br {
+    padding: 0 3rem;
+  }
+  .services .top .option-list .active#pd {
+    padding: 0 1.8rem;
+  }
+  .services .top .option-list .active#ue {
+    padding: 0 1.5rem;
+  }
+  .services .top .option-list .active#dm {
+    padding: 0 1.5rem;
+  }
+  .services .top .option-list .active#ad {
+    padding: 0 1.5rem;
+  }
+  .services .top .option-list .active#de {
+    padding: 0 1.5rem;
   }
 }
 @media (max-width: 868px) {
   .services {
     height: 100%;
   }
-  .services .top .option-list {
-    overflow-x: scroll;
-    scrollbar-width: 0;
-    margin: 25px 0;
-  }
-  .services .top h1{
+  .services .top h1 {
     margin: 1.5rem 0;
-  }
-  .services .top .option-list::-webkit-scrollbar {
-    width: 0;
-    height: 0;
   }
   .services .top .option-list .option {
     width: 160px;
     height: 110px;
     padding: 0 1rem;
   }
-  .services .top .option-list .option:hover {
-    background-color: #fff;
-    transition: all 0.5s ease-out;
-  }
-
-  #ue:hover i::before {
-    color: #fa7070 !important;
-    font-size: 2.5rem;
-  }
-  #pd:hover i::before {
-    color: #00aeff !important;
-    font-size: 2.5rem;
-  }
-  #dm:hover i::before {
-    color: #c679e3 !important;
-    font-size: 2.5rem;
-  }
-  #br:hover i::before {
-    color: #eb6b3d !important;
-    font-size: 2.5rem;
-  }
-  #de:hover i::before {
-    color: #0000ff !important;
-    font-size: 2.5rem;
-  }
-  #an:hover i::before {
-    color: #f78acb !important;
-    font-size: 2.5rem;
-  }
-
-  .services .top .option-list .option:hover h3 {
-    margin-top: 1.2rem;
-    color: #000;
-    transition: margin 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
-      -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
-  }
-
-  .services .top .option-list .option#br {
-    padding: 0 2.8rem;
-  }
-
   .services .top .option-list .active {
     width: 160px;
     height: 110px;
     padding: 0 1rem;
-  }
-  .services .top .option-list .active#br{
-    padding: 0 2.8rem;
   }
   .services .top .option-list .option h3 {
     font-size: 0.9rem;
@@ -222,26 +207,6 @@
     font-size: 2.3rem;
     color: #fff !important;
   }
-
-  .services .top .option-list .active #ue:hover i::before {
-    color: #fff !important;
-  }
-  .services .top .option-list .active#pd:hover i::before {
-    color: #fff !important;
-  }
-  .services .top .option-list .active#dm:hover i::before {
-    color: #fff !important;
-  }
-  .services .top .option-list .active#br:hover i::before {
-    color: #fff !important;
-  }
-  .services .top .option-list .active#de:hover i::before {
-    color: #fff !important;
-  }
-  .services .top .option-list .active#an:hover i::before {
-    color: #fff !important;
-  }
-
   .services .top .option-list .active h3 {
     font-size: 0.9rem;
     /* margin-top: 0; */
@@ -251,9 +216,6 @@
   }
 }
 @media (max-width: 680px) {
-  .services {
-    height: 136vh;
-  }
   .services .top {
     height: 28%;
   }
@@ -264,12 +226,8 @@
   .services .top h2 {
     font-size: 16px;
   }
-  
 }
 @media (max-width: 380px) {
-  .services {
-    height: auto;
-  }
   .services .top h2 {
     font-size: 14px;
   }

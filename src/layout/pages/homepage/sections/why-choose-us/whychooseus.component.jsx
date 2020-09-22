@@ -7,7 +7,7 @@ import "./whychooseus.styles.css";
 
 const WhyChooseUs = () => {
     return (
-        <div className="whychooseus">
+        <div className="whychooseus" id="whychooseus">
             <div className="pattern">
                 <img src={pattern} alt="pattern" />
             </div>

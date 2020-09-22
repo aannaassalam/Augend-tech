@@ -24,7 +24,7 @@ class ContactForm extends React.Component{
     render()
     {
         return(
-            <div className="contactform">
+            <div className="contactform" id="contact-form">
                 <div className="contactform-container">
                 <div className="left">
                     <img src={contactform} alt="contact-form"/>
@@ -33,7 +33,7 @@ class ContactForm extends React.Component{
                     <h1>CONTACT US</h1>
                     <h2>Let's talk about everything!</h2>
                     <h3>Don't like forms? Send us your email.</h3>
-                    <form className="contact-form" id="contact-form" name="contact-form">
+                    <form className="contact-form" name="contact-form">
                         <div className="form-group">
                             <FormInput
                                 name='name'

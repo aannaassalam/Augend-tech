@@ -51,6 +51,7 @@
   border-radius: 4px;
   cursor: pointer;
   position: relative;
+  white-space: nowrap;
 }
 .uebox .left .checkbox .check i {
   color: #fff;
@@ -108,9 +109,13 @@
   }
   .uebox .left {
     width: 100%;
+    margin-bottom: 50px;
   }
   .uebox .right {
     width: 100%;
+  }
+  .uebox .left .checkbox{
+    width: 70%;
   }
 }
 @media (max-width: 680px) {

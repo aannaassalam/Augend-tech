@@ -9,19 +9,19 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: 999;
 }
 
 .modal-blank .modal-container {
   position: relative;
   background-color: white;
-  height: 70%;
-  width: 30%;
+  width: 360px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .modal-blank .modal-container .modal-head {
@@ -44,20 +44,20 @@
 
 .modal-blank .modal-container .modal-input {
   display: flex;
-  width: 80%;
-  height: 70%;
+  width: 100%;
+
   flex-direction: column;
   /* margin-bottom: 35px; */
 }
 
 .modal-blank .modal-container .modal-input input {
   width: 100%;
-  height: 18%;
-  margin-bottom: 7px;
+  margin: 0.5rem 0;
   border: none;
   outline: none;
   font-size: 15px;
   border-bottom: 1px solid lightgrey;
+  padding: 0.5rem;
 }
 
 .modal-blank .modal-container .error {
@@ -67,7 +67,8 @@
 }
 
 .modal-blank .modal-container button {
-  position: absolute;
+  /* position: absolute; */
+  margin-top: 1rem;
   bottom: 1rem;
   width: 80%;
   height: 50px;
@@ -118,7 +119,7 @@
   width: 60%;
 }
 
-.modal-blank .modal-container .success{
+.modal-blank .modal-container .success {
   width: 100%;
   height: 80%;
   display: flex;
@@ -127,18 +128,17 @@
   justify-content: center;
 }
 
-.modal-blank .modal-container .success .animation{
+.modal-blank .modal-container .success .animation {
   width: 150px;
   height: 150px;
   margin-bottom: 20px;
 }
 
-.modal-blank .modal-container .success .text{
+.modal-blank .modal-container .success .text {
   font-size: 18px;
   font-weight: 500;
   color: #464646;
 }
 
-@media(max-width: 768px){
-  
+@media (max-width: 768px) {
 }

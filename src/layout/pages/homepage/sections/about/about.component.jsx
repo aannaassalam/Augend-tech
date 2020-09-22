@@ -7,7 +7,7 @@ import "./about.styles.css";
 
 const About = () => {
     return (
-        <div className="about">
+        <div className="about" id="about">
             <div className="pattern">
                 <img src={pattern} alt="pattern" />
             </div>

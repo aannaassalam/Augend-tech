@@ -27,7 +27,8 @@
 }
 .footer .top-one .part1 {
   margin: 1rem 0;
-  width: 30%;
+  width: 35%;
+  height: 100%;
 }
 .footer .top-one .part1 .brand {
   display: flex;
@@ -42,36 +43,36 @@
 }
 .footer .top-one .part1 .desc {
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 .footer .top-one .part1 .desc h2 {
   font-size: 1rem;
   text-align: center;
   color: #fff;
 }
-.footer .top-one .part1 .social {
+.footer .top-one .social {
   margin-top: 2rem;
-  width: 100%;
+  width: 25%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
-.footer .top-one .part1 .social a {
+.footer .top-one .social a {
   font-size: 1.8rem;
   margin: 0 0.8rem;
   color: #fff;
 }
-.footer .top-one .part1 .social a:nth-child(1):hover {
+.footer .top-one .social a:nth-child(1):hover {
   color: #3b5998 !important;
 }
-.footer .top-one .part1 .social a:nth-child(2):hover {
+.footer .top-one .social a:nth-child(2):hover {
   color: #55acee !important;
 }
-.footer .top-one .part1 .social a:nth-child(3):hover {
+.footer .top-one .social a:nth-child(3):hover {
   color: #25d366 !important;
 }
-.footer .top-one .part1 .social a:nth-child(4) i:hover {
+.footer .top-one .social a:nth-child(4) i:hover {
   background: -webkit-radial-gradient(
     33% 100% circle,
     #fed373 4%,
@@ -91,20 +92,18 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.footer .top-one .part1 .social a:nth-child(5):hover {
+.footer .top-one .social a:nth-child(5):hover {
   color: #0077b5 !important;
 }
-.footer .top-one .part1 .social a:hover {
+.footer .top-one .social a:hover {
   transform: scale(1.5) translateY(-5px);
   transition: transform 0.8s cubic-bezier(0.29, 1.42, 0.79, 1) 0s,
     -webkit-transform 0.8s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
 }
-.footer .top-one .part2 .bottom a:last-child {
+/* .footer .top-one .part2 .bottom a:last-child {
   font-size: 0.85rem;
-}
-.footer .top-one .part2,
-.footer .top-one .part3,
-.footer .top-one .part4 {
+} */
+.footer .top-one .part2 {
   margin-top: 2.5rem;
 }
 .footer .top-one .part .top {
@@ -155,7 +154,7 @@
   }
   .footer .top-one {
     /* transform: scale(0.8); */
-    width: 80%;
+    width: 90%;
   }
   .footer .top-one .part1 .brand h1 {
     color: #fff;
@@ -177,6 +176,13 @@
     font-size: 0.8rem;
   }
 }
+
+@media(max-width: 890px){
+  .footer .top-one .part1 .brand h1{
+    font-size: 25px;
+  }
+}
+
 @media (max-width: 768px) {
   .footer {
     height: auto;
@@ -191,15 +197,27 @@
     align-items: center;
     width: 100%;
   }
+  .footer .top-one .part1 .brand h1{
+    font-size: 22px;
+  } 
   .footer .top-one .part1 .brand img {
-    width: 50px;
+    width: 45px;
   }
   .footer .top-one .part1 .desc h2 {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
   .footer .top-one .part1 .desc {
     width: 90%;
     align-self: flex-start;
+  }
+  .footer .top-one .social a{
+    font-size: 1rem;
+  }
+  .footer .top-one .part2{
+    margin-top: 1.5rem;
+  }
+  .footer .top-one .part2 .bottom a{
+    font-size: 12px;
   }
 }
 
@@ -216,8 +234,29 @@
   .footer .top-one .part1 .brand {
     justify-content: center;
   }
+  .footer .top-one .part1 .brand img{
+    width: 50px;
+  }
+  .footer .top-one .part1 .brand h1{
+    font-size: 25px
+  }
   .footer .top-one .part1 .desc {
     width: 80%;
     align-self: center;
+  }
+  .footer .top-one .part2 .top h3{
+    font-size: 23px;
+  }
+  .footer .top-one .part2 .bottom a{
+    font-size: 16px;
+  }
+  .footer .top-one .part2 .bottom a:last-child{
+    font-size: 16px;
+  }
+  .footer .top-one .social{
+    width: 100%;
+  }
+  .footer .top-one .social a{
+    font-size: 1.8rem;
   }
 }

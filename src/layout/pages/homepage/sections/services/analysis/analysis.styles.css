@@ -51,6 +51,7 @@
   border-radius: 4px;
   cursor: pointer;
   position: relative;
+  white-space: nowrap;
 }
 .anbox .left .checkbox .check i {
   color: #fff;
@@ -114,7 +115,14 @@
   .anbox .right {
     width: 100%;
     height: 50%;
+    margin-bottom: 50px;
   }
+  .anbox .left .checkbox{
+    width: 90%;
+  }
+  .debox .left .checkbox .right{
+    margin-bottom: 50px;
+}
 }
 @media (max-width: 680px) {
 

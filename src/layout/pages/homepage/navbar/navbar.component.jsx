@@ -11,7 +11,7 @@ class NavBar extends React.Component {
     super(props);
     this.state = {
       hamburgerActive: false,
-      modal: false
+      modal: false,
     };
   }
 
@@ -28,7 +28,7 @@ class NavBar extends React.Component {
               <h1 className="togglecolortext">AUGEND TECH</h1>
             </div>
           </div>
-          <div
+          {/* <div
             className={
               this.state.hamburgerActive ? "active-hamburger" : "hamburger"
             }
@@ -39,7 +39,7 @@ class NavBar extends React.Component {
             <div className="line1"></div>
             <div className="line2"></div>
             <div className="line3"></div>
-          </div>
+          </div> */}
           <div
             className={
               this.state.hamburgerActive ? "full-menu-show" : "full-menu"
@@ -51,25 +51,25 @@ class NavBar extends React.Component {
                   <li>
                     <a
                       className="primary-menu"
-                      href="/services/web-development"
+                      href="#about"
                     >
-                      Web Development
+                      About
                     </a>
                   </li>
                   <li>
                     <a
                       className="primary-menu"
-                      href="/services/digital-marketing"
+                      href="#ourFeatures"
                     >
-                      Digital Marketing
+                      Our Features
                     </a>
                   </li>
                   <li>
                     <a
                       className="primary-menu"
-                      href="/services/app-development"
+                      href="#whychooseus"
                     >
-                      App Development
+                      Why choose us
                     </a>
                   </li>
                   <li>
@@ -82,18 +82,13 @@ class NavBar extends React.Component {
                       Blog
                     </a>
                   </li> */}
-                  <li>
-                    <a className="secondary-menu" href="#section-8">
-                      Seo-Analysis
-                    </a>
-                  </li>
                   {!auth.uid ? null : <SignOut />}
                 </ul>
               </div>
               <div className="full-menu-context-connect">
                 Lets do something brilliant together
                 <div className="get-in-touch">
-                  <a className="get-in-touch-btn" href="#section-8">
+                  <a className="get-in-touch-btn" href="#contact-form">
                     Get a Quote
                   </a>
                 </div>
@@ -147,8 +142,8 @@ class NavBar extends React.Component {
                   </a>
                 </li> */}
                 <li className="primary-menu">
-                  <a className="togglecolortext" href="#">
-                    Portfolio
+                  <a className="togglecolortext" href="#project">
+                    Our Works
                   </a>
                 </li>
                 <li className="primary-menu">
@@ -157,7 +152,10 @@ class NavBar extends React.Component {
                   </a>
                 </li>
                 <li className="primary-menu">
-                  <p onClick={() => this.setState({modal: true})} className="payment-btn">
+                  <p
+                    onClick={() => this.setState({ modal: true })}
+                    className="payment-btn"
+                  >
                     Make a payment
                   </p>
                 </li>
@@ -168,13 +166,13 @@ class NavBar extends React.Component {
           </div>
         </div>
         {this.state.modal ? (
-              <Modal
-                close={() => {
-                  console.log("true");
-                  this.setState({ modal: false });
-                }}
-              />
-            ) : null}
+          <Modal
+            close={() => {
+              console.log("true");
+              this.setState({ modal: false });
+            }}
+          />
+        ) : null}
         {this.state.hamburgerActive
           ? document.getElementsByTagName("body")[0].classList.add("scroll")
           : document.getElementsByTagName("body")[0].classList.remove("scroll")}

@@ -17,7 +17,6 @@ const Intropart3=()=>{
                 </h3>
                 <div className="button-group">
                     <a href="#contact-form">CONTACT US</a>
-                    <a href="https://youtu.be/Zmht7CQT03M" target="_blank" rel="noopener noreferrer"><i className="fas fa-play"></i>PLAY VIDEO</a>
                 </div>
             </div>
             <div className="right">
