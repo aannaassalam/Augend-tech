@@ -21,7 +21,7 @@ const Intropart2 = () => {
         <div className="button-group">
           <a href="#contact-form">CONTACT US</a>
           <a
-            href="https://youtu.be/retJL35WXpQ"
+            href="https://youtu.be/Zmht7CQT03M"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -159,14 +159,6 @@ class Services extends React.Component {
               <i className="flaticon-layout"></i>
               <h3>Web Development</h3>
             </div>
-            <div className={this.state.tab3} id="pd" onClick={this.handleShow3}>
-              <i className="flaticon-design"></i>
-              <h3>Product Design</h3>
-            </div>
-            <div className={this.state.tab4} id="ue" onClick={this.handleShow4}>
-              <i className="flaticon-ambient"></i>
-              <h3>Branding</h3>
-            </div>
             <div className={this.state.tab5} id="dm" onClick={this.handleShow5}>
               <i className="flaticon-content"></i>
               <h3>Digital Marketing</h3>
@@ -174,6 +166,14 @@ class Services extends React.Component {
             <div className={this.state.tab6} id="br" onClick={this.handleShow6}>
               <i className="flaticon-spread"></i>
               <h3>Data Analytics</h3>
+            </div>
+            <div className={this.state.tab3} id="pd" onClick={this.handleShow3}>
+              <i className="flaticon-design"></i>
+              <h3>Product Design</h3>
+            </div>
+            <div className={this.state.tab4} id="ue" onClick={this.handleShow4}>
+              <i className="flaticon-ambient"></i>
+              <h3>Branding</h3>
             </div>
           </div>
         </div>

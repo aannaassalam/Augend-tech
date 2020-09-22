@@ -19,7 +19,7 @@ const WhyChooseUs = () => {
                     </h2>
                     <div className="checklist">
                         <i className="fas fa-check cl1"></i>
-                        <h4>We work very hard to be as the supportive framework for our client's success.</h4>
+                        <h4>We work very hard to be as the supportive structure to our client's success.</h4>
                     </div>
                     <div className="checklist">
                         <i className="fas fa-check cl2"></i>

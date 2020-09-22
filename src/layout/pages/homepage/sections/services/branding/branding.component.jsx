@@ -19,15 +19,15 @@ const Branding = () => {
                     <div className="left">
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>User Friendly</h4>
+                            <h4>Brand Recognise</h4>
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>Super Responsive</h4>
+                            <h4>Brand Awareness</h4>
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>Optimal Choice</h4>
+                            <h4>Brand Advertisement</h4>
                         </div>
                     </div>
                     <div className="right">
@@ -37,7 +37,7 @@ const Branding = () => {
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>Creative Layout</h4>
+                            <h4>Creative Approach</h4>
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
