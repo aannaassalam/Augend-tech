@@ -118,6 +118,27 @@
   width: 60%;
 }
 
-.dom-ready{
+.modal-blank .modal-container .success{
   width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-blank .modal-container .success .animation{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.modal-blank .modal-container .success .text{
+  font-size: 18px;
+  font-weight: 500;
+  color: #464646;
+}
+
+@media(max-width: 768px){
+  
 }

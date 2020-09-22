@@ -299,7 +299,7 @@ nav .signout:hover div {
 .scroll{
   overflow-y: hidden;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 868px) {
   nav .navbar2 {
     justify-content: space-between;
     padding: 0 1rem;
@@ -345,7 +345,7 @@ nav .signout:hover div {
   .primary-menu {
     margin-bottom: 10px;
     color: #fff;
-    /* font-size: 3.5rem; */
+    font-size: 3.5rem;
     cursor: pointer;
   }
 
@@ -453,7 +453,7 @@ nav .signout:hover div {
   }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 868px) {
   nav {
     height: 8vh;
   }

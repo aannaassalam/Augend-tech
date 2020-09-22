@@ -141,35 +141,21 @@
     height: 200vh;
     margin-top: 1rem;
   }
-  .services .top {
-    height: 35%;
-  }
   .services .down {
     height: 65%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .services {
-    height: 250vh;
-  }
-}
-@media (max-width: 680px) {
-  .services {
-    height: 136vh;
-  }
-  .services .top {
-    height: 28%;
-  }
-  .services .top h1 {
-    font-size: 18px;
-    margin: 0.3rem 0;
-  }
-  .services .top h2 {
-    font-size: 16px;
+    height: 100%;
   }
   .services .top .option-list {
     overflow-x: scroll;
     scrollbar-width: 0;
+    margin: 25px 0;
+  }
+  .services .top h1{
+    margin: 1.5rem 0;
   }
   .services .top .option-list::-webkit-scrollbar {
     width: 0;
@@ -217,7 +203,7 @@
       -webkit-transform 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
   }
 
-  .services .top .option-list .option:last-child {
+  .services .top .option-list .option#br {
     padding: 0 2.8rem;
   }
 
@@ -263,6 +249,22 @@
   .services .top .option-list .option i::before {
     font-size: 2.2rem;
   }
+}
+@media (max-width: 680px) {
+  .services {
+    height: 136vh;
+  }
+  .services .top {
+    height: 28%;
+  }
+  .services .top h1 {
+    font-size: 18px;
+    margin: 0.3rem 0;
+  }
+  .services .top h2 {
+    font-size: 16px;
+  }
+  
 }
 @media (max-width: 380px) {
   .services {

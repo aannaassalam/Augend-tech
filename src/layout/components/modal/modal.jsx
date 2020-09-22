@@ -2,8 +2,10 @@ import React from "react";
 import "./modal.css";
 import firebase from "firebase";
 import razorpay from "./assets/1896px-Razorpay_logo.svg.png";
-import paypal from "./assets/paypal.png";
+import Lottie from 'lottie-react-web';
+import tick from "./assets/tick.json";
 import PaypalExpressBtn from "react-paypal-express-checkout";
+import { setTimeout } from "core-js";
 
 export default class Modal extends React.Component {
   
@@ -17,6 +19,7 @@ export default class Modal extends React.Component {
       projectName: "",
       error: " ",
       tab: "info",
+      subTab: "pay"
     };
   }
 
@@ -26,132 +29,6 @@ export default class Modal extends React.Component {
       [name]: value,
     });
   };
-
-  handlePaypal() {
-    // window.paypal
-    //   .Buttons({
-    //     createOrder: (data, actions, err) => {
-    //       return actions.order.create({
-    //         intent: "CAPTURE",
-    //         purchase_units: [
-    //           {
-    //             description: "Cool looking table",
-    //             amount: {
-    //               currency_code: "USD",
-    //               value: 650.0,
-    //             },
-    //           },
-    //         ],
-    //       });
-    //     },
-    //     onApprove: async (data, actions) => {
-    //       const order = await actions.order.capture();
-    //       console.log(order);
-    //     },
-    //     onError: (err) => {
-    //       console.log(err);
-    //     },
-    //   })
-      // .render(paypal.current);
-
-  //   var paypal = require("paypal-rest-sdk");
-
-  //   paypal.configure({
-  //     mode: "sandbox", // Sandbox or live
-  //     client_id:
-  //       "AbNa-UqBHsUz0mP5b2jrPCdyZcWyc1Z2YtnoNo46BPNXaRUNB6D6PDxCZa8LUkI7Q4YJKpWDAz9pLpSF",
-  //     client_secret:
-  //       "EIfhGapOaeubNPp2UtX36FprG-9FRmrMsiULvUwIFON_iDg1o00SlNK07KoywGnE0GZwElJ-V1Pn39wN",
-  //   });
-
-  //   var create_payment_json = {
-  //     "intent": "CAPTURE",
-  //     "payer": {
-  //         "payment_method": "paypal"
-  //     },
-  //     "redirect_urls": {
-  //         "return_url": "http://return.url",
-  //         "cancel_url": "http://cancel.url"
-  //     },
-  //     "transactions": [{
-  //         "item_list": {
-  //             "items": [{
-  //                 "name": this.state.projectName,
-  //                 "price": this.state.amount,
-  //                 "currency": "USD",
-  //             }]
-  //         },
-  //         "amount": {
-  //             "currency": "USD",
-  //             "total": this.state.amount
-  //         },
-  //         "description": "This is the payment description."
-  //     }]
-  // };
-   
-   
-  // paypal.payment.create(create_payment_json, function (error, payment) {
-  //     if (error) {
-  //         throw error;
-  //     } else {
-  //         console.log("Create Payment Response");
-  //         console.log(payment);
-  //     }
-  // });
-
-    // var payReq = JSON.stringify({
-    //   intent: "Payment",
-    //   payer: {
-    //     payment_method: "paypal",
-    //   },
-    //   transactions: [
-    //     {
-    //       amount: {
-    //         total: this.state.amount,
-    //         currency: "USD",
-    //       },
-    //       description: "Payment for" + this.state.projectName,
-    //     },
-    //   ],
-    // });
-
-    // paypal.payment.create(payReq, (error, payment) => {
-    //   var links = {};
-    //   alert("here");
-    //   if (error) {
-    //     console.error(JSON.stringify(error));
-    //   } else {
-    //     // Capture HATEOAS links
-    //     payment.links.forEach(function (linkObj) {
-    //       links[linkObj.rel] = {
-    //         href: linkObj.href,
-    //         method: linkObj.method,
-    //       };
-    //     });
-
-    //     // If the redirect URL is present, redirect the customer to that URL
-    //     if (links.hasOwnProperty("approval_url")) {
-    //       // Redirect the customer to links['approval_url'].href
-    //     } else {
-    //       console.error("no redirect URI present");
-    //     }
-    //   }
-    // });
-    // var paymentId = "jjogihbb";
-    // var payerId = { payer_id: this.state.name };
-
-    // paypal.payment.execute(paymentId, payerId, function (error, payment) {
-    //   if (error) {
-    //     console.error(JSON.stringify(error));
-    //   } else {
-    //     if (payment.state === "approved") {
-    //       console.log("payment completed successfully");
-    //     } else {
-    //       console.log("payment not successful");
-    //     }
-    //   }
-    // });
-  }
 
   handleDatabase(payment){
     firebase.firestore().collection("payments").add({
@@ -180,6 +57,7 @@ export default class Modal extends React.Component {
             amount: this.state.amount,
             projectName: this.state.projectName,
           });
+          this.props.close();
         } catch (err) {
           console.log(err);
         }
@@ -227,6 +105,16 @@ export default class Modal extends React.Component {
         // Congratulation, it came here means everything's fine!
                 console.log("The payment was succeeded!", payment);
                 this.handleDatabase(payment);
+                this.setState({
+                  subTab: "success"
+                })
+                setTimeout(() => {
+                  this.props.close();
+                  this.setState({
+                    subTab: "pay"
+                  })
+                }, 3000);
+                
             // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
     }
     const onCancel = (data) => {
@@ -302,14 +190,12 @@ export default class Modal extends React.Component {
                 Pay
               </button>
             </>
-          ) : (
+          ) : this.state.subTab === "pay" ? 
+          (
             <div className="payment-container">
               <h3>Choose a method</h3>
               <div
                 className="paypal"
-                // onClick={() => {
-                //   this.handlePaypal();
-                // }}
               >
                 <PaypalExpressBtn env={env} client={client} currency={currency} total={total} onError={onError} onSuccess={onSuccess} onCancel={onCancel}/>
               </div>
@@ -322,7 +208,19 @@ export default class Modal extends React.Component {
                 <img src={razorpay} alt="Razorpay" />
               </div>
             </div>
-          )}
+          ): 
+          <div className="success">
+            <div className="animation">
+                <Lottie options={{loop: true,
+                autoplay: true,
+                animationData: tick}}
+                />
+            </div>
+            <div className="text">
+                Your transaction was Successful.
+            </div>
+          </div>
+          }
         </div>
       </div>
     );
