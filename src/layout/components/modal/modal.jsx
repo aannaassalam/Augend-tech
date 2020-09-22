@@ -3,6 +3,7 @@ import "./modal.css";
 import firebase from "firebase";
 import razorpay from "./assets/1896px-Razorpay_logo.svg.png";
 import paypal from "./assets/paypal.png";
+import PaypalExpressBtn from "react-paypal-express-checkout";
 
 export default class Modal extends React.Component {
   
@@ -152,6 +153,17 @@ export default class Modal extends React.Component {
     // });
   }
 
+  handleDatabase(payment){
+    firebase.firestore().collection("payments").add({
+      name: this.state.name,
+      phone: this.state.phone,
+      email: this.state.email,
+      paymentId: payment.paymentID,
+      amount: this.state.amount,
+      projectName: this.state.projectName,
+    });
+  }
+
   handleRazorpay() {
     const options = {
       key: "rzp_test_dxlgLQGi0JrIZp",
@@ -210,6 +222,35 @@ export default class Modal extends React.Component {
   }
 
   render() {
+    const amount=parseInt(this.state.amount, 10);
+    const onSuccess = (payment) => {
+        // Congratulation, it came here means everything's fine!
+                console.log("The payment was succeeded!", payment);
+                this.handleDatabase(payment);
+            // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
+    }
+    const onCancel = (data) => {
+        // User pressed "cancel" or close Paypal's popup!
+        console.log('The payment was cancelled!', data);
+        // You can bind the "data" object's value to your state or props or whatever here, please see below for sample returned data
+    }
+
+    const onError = (err) => {
+        // The main Paypal's script cannot be loaded or somethings block the loading of that script!
+        console.log("Error!", err);
+        // Because the Paypal's main script is loaded asynchronously from "https://www.paypalobjects.com/api/checkout.js"
+        // => sometimes it may take about 0.5 second for everything to get set, or for the button to appear
+    }
+    let env = 'sandbox'; // you can set here to 'production' for production
+    let currency = 'INR'; // or you can set this value from your props or state
+    let total = amount; // same as above, this is the total amount (based on currency) to be paid by using Paypal express checkout
+    // Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
+
+    const client = {
+        sandbox:'Ac-IsJnUj4a2f-reCxrYyuZgxxu0RB1IqAgQt-jjYoRzcYMV3SLWC85gf8ekhfJaYmIGD6ghiHRIQogd',
+        // production: 'AaK6PSCmjFHprihIkeblnScs6KHN30mrd56BScD0jRvFHcyZrAfcdaytDDTDMYh7oN2HExaPjmioGCRt',
+    }
+
     return (
       <div className="modal-blank">
         <div className="modal-container">
@@ -266,11 +307,11 @@ export default class Modal extends React.Component {
               <h3>Choose a method</h3>
               <div
                 className="paypal"
-                onClick={() => {
-                  this.handlePaypal();
-                }}
+                // onClick={() => {
+                //   this.handlePaypal();
+                // }}
               >
-                <img src={paypal} alt="Paypal"/>
+                <PaypalExpressBtn env={env} client={client} currency={currency} total={total} onError={onError} onSuccess={onSuccess} onCancel={onCancel}/>
               </div>
               <div
                 className="razorpay"

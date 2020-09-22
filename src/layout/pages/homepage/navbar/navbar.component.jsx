@@ -152,12 +152,12 @@ class NavBar extends React.Component {
                   </a>
                 </li>
                 <li className="primary-menu">
-                  <a href="#contact-form" class="contact-btn">
+                  <a href="#contact-form" className="contact-btn">
                     Contact us
                   </a>
                 </li>
                 <li className="primary-menu">
-                  <p onClick={() => this.setState({modal: true})} class="payment-btn">
+                  <p onClick={() => this.setState({modal: true})} className="payment-btn">
                     Make a payment
                   </p>
                 </li>

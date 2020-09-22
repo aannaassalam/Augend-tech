@@ -53,7 +53,6 @@ class HomePage extends React.Component {
               <button
                 type="button"
                 onClick={() => {
-                  console.log("noticed");
                   this.setState({ modal: true });
                 }}
               >
@@ -64,7 +63,6 @@ class HomePage extends React.Component {
             {this.state.modal ? (
               <Modal
                 close={() => {
-                  console.log("true");
                   this.setState({ modal: false });
                 }}
               />

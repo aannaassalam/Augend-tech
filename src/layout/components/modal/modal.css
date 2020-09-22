@@ -102,10 +102,7 @@
   padding: 0.3rem;
   display: flex;
   justify-content: center;
-}
-
-.modal-blank .modal-container .payment-container .paypal img {
-  width: 60%;
+  cursor: pointer;
 }
 
 .modal-blank .modal-container .payment-container .razorpay {
@@ -119,4 +116,8 @@
 
 .modal-blank .modal-container .payment-container .razorpay img {
   width: 60%;
+}
+
+.dom-ready{
+  width: 100%;
 }
