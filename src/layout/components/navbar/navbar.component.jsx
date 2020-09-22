@@ -47,10 +47,10 @@ class NavBar extends React.Component{
                               </div>
                           </div>
                           <div className="full-menu-context-social">
-                              <a className="social-icon ln" href="https://www.linkedin.com/in/flappify/"><i className="fab fa-linkedin"></i>LinkedIn</a>
-                              <a className="social-icon ig" href="https://www.instagram.com/flappify/"><i className="fab fa-instagram"></i>Instagram</a>
-                              <a className="social-icon fb" href="https://www.facebook.com/flappify/"><i className="fab fa-facebook-square"></i>Facebook</a>
-                              <a className="social-icon wa" href="https://wa.me/917044217217"><i className="fab fa-whatsapp-square"></i>Whatsapp</a>
+                              <a className="social-icon ln" href="https://www.linkedin.com/company/augendtech"><i className="fab fa-linkedin"></i>LinkedIn</a>
+                              <a className="social-icon ig" href="https://www.instagram.com/augendtech/"><i className="fab fa-instagram"></i>Instagram</a>
+                              <a className="social-icon fb" href="https://www.facebook.com/augendtech"><i className="fab fa-facebook-square"></i>Facebook</a>
+                              <a className="social-icon wa" href="https://wa.me/919874174414"><i className="fab fa-whatsapp-square"></i>Whatsapp</a>
                           </div>
                   </div>
               </div>
@@ -69,7 +69,7 @@ class NavBar extends React.Component{
                         </div>
                       </li> */}
                       <li className="primary-menu"><a className="togglecolortext" href="/blog" >Blog</a></li>
-                      <li className="primary-menu"><a className="togglecolortext" href="/works" >Our Works</a></li>
+                      <li className="primary-menu"><a className="togglecolortext" href="/works" >Portfolio</a></li>
                       {/* <li className="primary-menu"><a href="/contact" className="create">Get a Quote</a></li> */}
                     </ul>
                     {/* {(!auth.uid)? null:<SignOut/> } */}

@@ -8,24 +8,24 @@ const AppDevelopment = () => {
     return (
         <div className="debox">
             <div className="left">
-                <h1>Desire And Its Done</h1>
+                <h1>Desire it And Its Done</h1>
                 <h2>App Development</h2>
                 <h3>
-                    Intuitive designs combined with compelling user experience are what makes our apps stand ahead in the digital age. Seamless experience driven by international standards in collaboration with out-of-the-box ideas is the specialty of Trian helping your business accomplish its goals.
+                    Apps are what we use to scale businesses to new heights. Through modern native app development technologies we offer highly optimised apps that are snappy and adhering to modern standards.
                 </h3>
                 <div className="checkbox">
                     <div className="left">
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>User Friendly</h4>
+                            <h4>Intuitive UI</h4>
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>Super Responsive</h4>
+                            <h4>Blazing Performance</h4>
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>Optimal Choice</h4>
+                            <h4>Fluid User Experience</h4>
                         </div>
                     </div>
                     <div className="right">
@@ -39,7 +39,7 @@ const AppDevelopment = () => {
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>Great Advices</h4>
+                            <h4>Scalable Architecture</h4>
                         </div>
                     </div>
                 </div>

@@ -12,36 +12,36 @@ const Analysis = () => {
             </div>
             <div className="left">
                 <h1>Always Stay Ahead</h1>
-                <h2>Analysis</h2>
-                <h3>We offer predictive modeling services that guide you towards the underlying profitable opportunity segments. In addition, they help uncover existing risks well in time and prepare go-to market strategies.
+                <h2>Data Analysis and Visualisation</h2>
+                <h3>Customized Data Visualization solution captures the steps from collection of data, data enrichment and cleansing and finally presenting it on the reporting layer.
                 </h3>
                 <div className="checkbox">
                     <div className="left">
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>User Friendly</h4>
+                            <h4>Data Integrity</h4>
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>Super Responsive</h4>
+                            <h4>Data warehousing</h4>
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>Optimal Choice</h4>
+                            <h4>Data Cleaning</h4>
                         </div>
                     </div>
                     <div className="right">
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>High Security</h4>
+                            <h4>Data Security</h4>
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>Creative Layout</h4>
+                            <h4>Data Acquisition</h4>
                         </div>
                         <div className="check">
                             <i className="fas fa-check"></i>
-                            <h4>Great Advices</h4>
+                            <h4>Data Modelling</h4>
                         </div>
                     </div>
                 </div>
