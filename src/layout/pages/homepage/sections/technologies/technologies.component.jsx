@@ -56,11 +56,11 @@ const Technologies = () => {
               <h3>Firebase</h3>
             </div>
             <div className="language">
-              <img src={language5} class="lessMargin-left" alt="coding-langauge" />
+              <img src={language5} className="lessMargin-left" alt="coding-langauge" />
               <h3>MongoDB</h3>
             </div>
             <div className="language">
-              <img src={language7} class="additional-margin" alt="coding-langauge" />
+              <img src={language7} className="additional-margin" alt="coding-langauge" />
               <h3>Ionic</h3>
             </div>
           </div>
