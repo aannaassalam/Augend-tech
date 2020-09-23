@@ -80,7 +80,7 @@
   .form-group
   .group
   .form-input-label.shrink {
-  top: 0px;
+  top: 15px;
 }
 .contactform
   .contactform-container
@@ -90,7 +90,7 @@
   .group
   .form-input:focus
   ~ .form-input-label {
-  top: 0px;
+  top: 15px;
 }
 .contactform .contactform-container .right .contact-form button {
   border: none;
@@ -172,6 +172,25 @@
     align-self: center;
     margin-top: 2rem;
   }
+  .contactform
+  .contactform-container
+  .right
+  .contact-form
+  .form-group
+  .group
+  .form-input-label.shrink {
+  top: 0px;
+  }
+  .contactform
+  .contactform-container
+  .right
+  .contact-form
+  .form-group
+  .group
+  .form-input:focus
+  ~ .form-input-label {
+  top: 0px;
+}
   .contactform .contactform-container .right .contact-form button {
     margin-top: 1rem;
   }
@@ -217,10 +236,10 @@
     height: 70%;
   }
   .contactform .contactform-container .right .contact-form .form-group{
-      flex-direction: column;
-      align-items: flex-start;
-      height: 50%;
-      width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 50%;
+    width: 100%;
   }
   .contactform .contactform-container .right .contact-form button {
       margin-top: 2rem;

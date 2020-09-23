@@ -1,9 +1,9 @@
 import React from 'react';
-
+import firebase from "firebase";
 import FormInput from '../../../../components/form-input/form-input.component';
-
+import toaster from "toasted-notes";
 import contactform from '../../../../../assets/contactform.png';
-
+import "toasted-notes/src/styles.css";
 import "./contactform.styles.css";
 
 class ContactForm extends React.Component{
@@ -16,15 +16,38 @@ class ContactForm extends React.Component{
             phone: '',
             message:''
         };
-      }
+    }
     handleChange = event => {
         const { value, name } = event.target;
         this.setState({ [name]: value });
-    };
+    }
+    handleSubmit(){
+        if(this.state.name.length > 0 && this.state.email.length > 0 && this.state.phone.length > 0 && this.state.message.length > 0){
+            firebase
+            .firestore()
+            .collection("contacts")
+            .add({
+                name: this.state.name,
+                phone: this.state.phone,
+                email: this.state.email,
+                message: this.state.message
+            }).then(() => {
+                toaster.notify("Message sent succesfully", {duration: 2000});
+                this.setState({
+                    name: "",
+                    phone: "",
+                    email: "",
+                    message: ""
+                })
+            })
+        }else{
+            toaster.notify("Please fill in all the fields", {duration: 2000});
+        }
+    }
     render()
     {
         return(
-            <div className="contactform" id="contact-form">
+            <div className="contactform" id="contact-form" >
                 <div className="contactform-container">
                 <div className="left">
                     <img src={contactform} alt="contact-form"/>
@@ -41,7 +64,7 @@ class ContactForm extends React.Component{
                                 handleChange={this.handleChange}
                                 value={this.state.name}
                                 label='Your Name'
-                                required
+                                // required
                             />
                             <FormInput
                                 name='email'
@@ -49,7 +72,7 @@ class ContactForm extends React.Component{
                                 handleChange={this.handleChange}
                                 value={this.state.email}
                                 label='Email'
-                                required
+                                // required
                             />
                         </div>
                         <div className="form-group">
@@ -59,7 +82,7 @@ class ContactForm extends React.Component{
                                 handleChange={this.handleChange}
                                 value={this.state.phone}
                                 label='Phone'
-                                required
+                                // required
                             />
                             <FormInput
                                 name='message'
@@ -67,10 +90,10 @@ class ContactForm extends React.Component{
                                 handleChange={this.handleChange}
                                 value={this.state.message}
                                 label='Message'
-                                required
+                                // required
                             />
                         </div>
-                        <button type="submit">
+                        <button type="button" onClick={() => this.handleSubmit()}>
                             <div>
                                 <h6>SEND</h6>
                                 <i className="fas fa-paper-plane"></i>

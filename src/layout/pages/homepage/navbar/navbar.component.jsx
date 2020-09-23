@@ -122,8 +122,8 @@ class NavBar extends React.Component {
             <div className="menu-list">
               <ul>
                 <li className="primary-menu">
-                  <a href="/" className="togglecolortext">
-                    Home
+                  <a href="#about" className="togglecolortext">
+                    About
                   </a>
                 </li>
                 {/* <li className="primary-menu drop-menu">
