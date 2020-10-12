@@ -1,6 +1,6 @@
 import React from 'react';
 
-import development from '../../../../../../assets/development.png';
+import development from '../../../../../../assets/mobile-app-development-img.png';
 
 import "./development.styles.css";
 

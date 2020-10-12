@@ -1,6 +1,6 @@
 import React from 'react';
 
-import analysis from '../../../../../../assets/analysis.png';
+import analysis from '../../../../../../assets/Data-Analyst.png';
 
 import "./analysis.styles.css";
 
