@@ -56,7 +56,7 @@ export default class Modal extends React.Component {
 
   handleRazorpay() {
     const options = {
-      key: "rzp_test_dxlgLQGi0JrIZp",
+      key: "rzp_live_OPodxnEwG2T1yT",
       name: "Augend Tech",
       description: "Make a payment for, " + this.state.projectName,
       amount: this.state.amount,
@@ -145,7 +145,7 @@ export default class Modal extends React.Component {
       // Because the Paypal's main script is loaded asynchronously from "https://www.paypalobjects.com/api/checkout.js"
       // => sometimes it may take about 0.5 second for everything to get set, or for the button to appear
     };
-    let env = "sandbox"; // you can set here to 'production' for production
+    let env = "production"; // you can set here to 'production' for production
     let currency = "INR"; // or you can set this value from your props or state
     let total = amount; // same as above, this is the total amount (based on currency) to be paid by using Paypal express checkout
     // Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
@@ -153,7 +153,7 @@ export default class Modal extends React.Component {
     const client = {
       sandbox:
         "Ac-IsJnUj4a2f-reCxrYyuZgxxu0RB1IqAgQt-jjYoRzcYMV3SLWC85gf8ekhfJaYmIGD6ghiHRIQogd",
-      // production: 'AaK6PSCmjFHprihIkeblnScs6KHN30mrd56BScD0jRvFHcyZrAfcdaytDDTDMYh7oN2HExaPjmioGCRt',
+      production: 'AamWLrPLjedBIrYKYlPhg-bTGJW23MH6jAJy4mdpZFPysUm1LSfii_O6PEQohROrH84ZOnxP4vQavdlS',
     };
 
     return (

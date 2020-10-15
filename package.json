@@ -8,7 +8,7 @@
     "editorjs-react": "^0.1.9",
     "email-domain-check": "^1.1.4",
     "email-exists": "^0.2.1",
-    "firebase": "^7.15.3",
+    "firebase": "^7.23.0",
     "gsap": "^3.0.5",
     "jquery": "^3.5.1",
     "lottie-react-web": "^2.2.2",
