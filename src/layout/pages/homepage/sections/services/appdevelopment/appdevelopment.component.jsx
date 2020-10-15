@@ -2,11 +2,11 @@ import React from 'react';
 
 import development from '../../../../../../assets/mobile-app-development-img.png';
 
-import "./development.styles.css";
+import "./appdevelopment.styles.css";
 
 const AppDevelopment = () => {
     return (
-        <div className="debox">
+        <div className="adbox">
             <div className="left">
                 <h1>Desire it And Its Done</h1>
                 <h2>App Development</h2>

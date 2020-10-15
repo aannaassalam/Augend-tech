@@ -1,6 +1,6 @@
 import React from 'react';
 
-import productdesign from '../../../../../../assets/productdesign.png';
+import productdesign from '../../../../../../assets/1447 .png';
 
 import "./productdesign.styles.css";
 

@@ -1,4 +1,4 @@
-.debox{
+.adbox{
     width: 100%;
     height: 100%;
     display: flex;
@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.debox .left{
+.adbox .left{
     width: 50%;
     height: 100%;
     display: flex;
@@ -14,36 +14,36 @@
     align-items: flex-start;
     justify-content: center;
 }
-.debox .left h2{
+.adbox .left h2{
     color: #0000ff;
     margin: 15px 0;
 }
-.debox .left h3{
+.adbox .left h3{
     font-size: 1rem;
 }
 
-.debox .left .checkbox{
+.adbox .left .checkbox{
     width: 100%;
     margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.debox .left .checkbox .left{
+.adbox .left .checkbox .left{
     width: 50%;
     height: 180px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.debox .left .checkbox .right{
+.adbox .left .checkbox .right{
     width: 50%;
     height: 180px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.debox .left .checkbox .check{
+.adbox .left .checkbox .check{
     width: 220px;
     height: 45px;
     display: flex;
@@ -54,7 +54,7 @@
     position: relative;
     white-space: nowrap;
 }
-.debox .left .checkbox .check i{
+.adbox .left .checkbox .check i{
     color: #fff;
     padding: 8px;
     background-color: #0000ff;
@@ -62,11 +62,11 @@
     margin: 0 10px;
     font-size: 0.8rem;
 }
-.debox .left .checkbox .check h4{
+.adbox .left .checkbox .check h4{
     font-size: 1.2rem;
 }
 
-.debox .left .checkbox .check:before{
+.adbox .left .checkbox .check:before{
     content: "";
     width: 0px;
     height: 50px;
@@ -76,21 +76,21 @@
     border-radius: 4px;
     cursor: pointer;
 }
-.debox .left .checkbox .check:hover:before{
+.adbox .left .checkbox .check:hover:before{
     width: 220px;
     transform-origin: left;
     transition: width .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
 }
-.debox .left .checkbox .check:hover i{
+.adbox .left .checkbox .check:hover i{
     color: #0000ff;
     background-color: #fff;
     transition: all 0.35s ease-in;
 }
-.debox .left .checkbox .check:hover h4{
+.adbox .left .checkbox .check:hover h4{
     color: #fff;
     transition: color 0.35s ease-in;
 }
-.debox .right{
+.adbox .right{
     width: 50%;
     height: 100%;
     display: flex;
@@ -98,54 +98,54 @@
     align-items: center;
 }
 
-.debox .right img{
+.adbox .right img{
     width: 70%;
     height: 80%;
 }
 
 @media only screen and (max-width:1024px){
-    .debox{
+    .adbox{
         flex-direction: column;
     }
-    .debox .left{
+    .adbox .left{
         width: 100%;
         margin-bottom: 50px;
     }
-    .debox .right{
+    .adbox .right{
         width: 100%;
     }
-    .debox .left .checkbox{
+    .adbox .left .checkbox{
         width: 90%;
     }
-    .debox .left .checkbox .right{
+    .adbox .left .checkbox .right{
         margin-bottom: 50px;
     }
 }
 @media (max-width: 680px){
-    .debox .left .checkbox{
+    .adbox .left .checkbox{
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .debox .left .checkbox .left{
+    .adbox .left .checkbox .left{
         width: 100%;
         margin-bottom: 23px;
     }
-    .debox .left .checkbox .right{
+    .adbox .left .checkbox .right{
         width: 100%;
         align-items: flex-start;
     }
-    .debox .right{
+    .adbox .right{
         width: 100%;
         height: auto;
     }
 }
 @media (max-width: 380px){
-    .debox .left{
+    .adbox .left{
         width: 100%;
         height: 70%;
     }
-    .debox .right{
+    .adbox .right{
         margin: 1rem 0;
     }
 }

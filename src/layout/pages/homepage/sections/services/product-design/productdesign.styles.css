@@ -93,12 +93,12 @@
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .pdbox .right img{
-    width: 70%;
+    width: 80%;
     height: 80%;
 }
 
