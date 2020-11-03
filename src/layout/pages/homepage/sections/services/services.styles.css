@@ -18,6 +18,7 @@
 }
 .services .top h1 {
   margin: 0.5rem 0;
+  font-size: 1rem;
 }
 .services .top h2 {
   margin: 0 0 2rem 0;
@@ -114,6 +115,7 @@
 .services .down {
   width: 90%;
   height: 60%;
+  padding-top: 4rem;
 }
 
 .services .down .option-detail {

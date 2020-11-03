@@ -55,13 +55,13 @@
 .intropart2 .button-group a i:hover{
     background-image: linear-gradient(90deg,#f0ac0e 0%,#f56616 40%);
 }
-.intropart2 .button-group a:nth-child(1){
-    background-color: transparent;
-    background-image: linear-gradient(270deg,#6254e7 0%,#9289f1 100%);
-    color: #fff;
+.intropart2 .button-group a:nth-child(1) {
+  background-color: #f0ac0e;
+  background-image: linear-gradient(90deg, #f0ac0e 0%, #f56616 100%);
+  color: #fff;
 }
-.intropart2 .button-group a:nth-child(1):hover{
-    background-image: linear-gradient(270deg,#6254e7 0%,#9289f1 40%);
+.intropart2 .button-group a:nth-child(1):hover {
+  background-image: linear-gradient(90deg, #f0ac0e 0%, #f56616 40%);
 }
 .intropart2 .button-group a:nth-child(2)
 {

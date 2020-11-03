@@ -35,7 +35,7 @@ class Footer extends React.Component {
                             <h3>Contact</h3>
                         </div>
                         <div className="bottom">
-                            <a href="tel:+1-9167501833"><i className="fas fa-mobile"></i>(US) +91 916 750 1833</a>
+                            <a href="tel:+1-9167501833"><i className="fas fa-mobile"></i>(US) +1 916 750 1833</a>
                             <a href="tel:+91-9874174414"><i className="fas fa-mobile"></i>(IND) + 91 987 417 4414</a>
                             <a href="mailto:contact@augendtech.com?subject=Happy To Assist"><i className="fas fa-envelope-open"></i>contact@augendtech.com</a>
                         </div>

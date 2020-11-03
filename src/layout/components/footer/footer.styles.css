@@ -26,7 +26,7 @@
   /* margin: 0 2.5rem; */
 }
 .footer .top-one .part1 {
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   width: 35%;
   height: 100%;
 }
@@ -64,7 +64,7 @@
   color: #fff;
 }
 .footer .top-one .social a:nth-child(1):hover {
-  color: #3b5998 !important;
+  color: #0f8ff2 !important;
 }
 .footer .top-one .social a:nth-child(2):hover {
   color: #55acee !important;
@@ -104,7 +104,7 @@
   font-size: 0.85rem;
 } */
 .footer .top-one .part2 {
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 }
 .footer .top-one .part .top {
   width: 100%;
@@ -131,7 +131,7 @@
 }
 .footer .top-one .part .bottom a i {
   margin: 0 0.6rem 0 0;
-  color: #5854e2;
+  color: #fff;
 }
 .footer .bottom {
   width: 80%;
