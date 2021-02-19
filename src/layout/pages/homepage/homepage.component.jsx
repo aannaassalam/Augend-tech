@@ -15,65 +15,60 @@ import Modal from "../../components/modal/modal";
 import "./homepage.styles.css";
 
 class HomePage extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      loading: false,
-      modal: false,
-    };
-  }
-  componentDidMount() {
-    // document.querySelector('.navbar').style.display='none';
-  }
-  componentWillUnmount() {
-    // document.querySelector('.navbar').style.display='flex';
-  }
+	constructor() {
+		super();
+		this.state = {
+			loading: false,
+			modal: false,
+		};
+	}
+	componentDidMount() {
+		// document.querySelector('.navbar').style.display='none';
+	}
+	componentWillUnmount() {
+		// document.querySelector('.navbar').style.display='flex';
+	}
 
-  render() {
-    return (
-      <div>
-        <div className='load'>
-          {/* <Loader/> */}
-        </div>
-        <div className="load">{/* <Loader/> */}</div>
-        <div className="homepage">
-          <NavBar />
-          <Intro />
-          <About />
-          <Services />
-          <WhyChooseUS />
-          <WorkProcess />
-          <Technologies />
-          <ProjectPreview />
-          <div className="make-payment-container">
-            <div className="make-payment">
-              <p>
-                The harder you work for something, the greater you'll feel when you achieve it.
-              </p>
-              <button
-                type="button"
-                onClick={() => {
-                  this.setState({ modal: true });
-                }}
-              >
-                <p>Make a payment</p>
-                <i className="fas fa-credit-card"></i>
-              </button>
-            </div>
-            {this.state.modal ? (
-              <Modal
-                close={() => {
-                  this.setState({ modal: false });
-                }}
-              />
-            ) : null}
-          </div>
-          <BlogPreview />
-          <ContactForm />
-        </div>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div>
+				<div className='load'>{/* <Loader/> */}</div>
+				<div className='load'>{/* <Loader/> */}</div>
+				<div className='homepage'>
+					<NavBar />
+					<Intro />
+					<About />
+					<Services />
+					<WhyChooseUS />
+					<WorkProcess />
+					<Technologies />
+					<ProjectPreview />
+					<div className='make-payment-container'>
+						<div className='make-payment'>
+							<p>The harder you work for something, the greater you'll feel when you achieve it.</p>
+							<button
+								type='button'
+								onClick={() => {
+									this.setState({ modal: true });
+								}}>
+								<p>Make a payment</p>
+								<i className='fas fa-credit-card'></i>
+							</button>
+						</div>
+						{this.state.modal ? (
+							<Modal
+								close={() => {
+									this.setState({ modal: false });
+								}}
+							/>
+						) : null}
+					</div>
+					{/* <BlogPreview /> */}
+					<ContactForm />
+				</div>
+			</div>
+		);
+	}
 }
 
 export default HomePage;
